@@ -1,0 +1,111 @@
+site_name: don_corps
+repo_url: https://github.com/destrieux/don_corps
+//edit_uri: https://lab.civicrm.org/extensions/yourproject_LANGUAGE/-/edit/master
+site_description: 'Documentation pour Civicrm Dons du Corps.'
+site_author: 'Chrisotphe Destrieux'
+theme:
+  name:
+    material
+
+nav:
+- Home: index.md
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - def_list
+  - pymdownx.highlight:
+      guess_lang: False
+  - toc:
+      permalink: True
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tilde
+  - pymdownx.betterem
+  - pymdownx.mark
+
+plugins:
+  - search:
+      lang: fr
+
+nav:
+  - A Propos: 'index.md'
+
+  - Guide administrateur: 
+    - 'Contenu': 'GuideAdmin/intro/intro.md'
+    - 'Prerequis': 'GuideAdmin/intro/prerequis.md' 
+    - 'WordPress': 'GuideAdmin/wordpress/wordpress.md'
+    - CiviCRM:
+        - 'Installer CiviCRM': 'GuideAdmin/civicrm/installcivi.md'
+        - 'Installer cv et cli': 'GuideAdmin/civicrm/cv.md'
+        - 'Télécharger les extensions indispensables': 'GuideAdmin/civicrm/extensions.md'
+        - 'Installer don_corps': 'GuideAdmin/civicrm/doncorps.md'
+        - 'Migrer la base de données': 'GuideAdmin/civicrm/migration.md'
+        - 'Mise à jour de CiviCRM': 'GuideAdmin/civicrm/majcivi.md'
+    - 'Trucs': 'GuideAdmin/trucs.md'
+
+  - Paramétrage:
+    - 'Paramétrage': 'Parametrage/intro.md'
+    - Paramètres Administrateur:
+        - 'Organisation par defaut': 'Parametrage/admin/org.md'
+        - 'Messagerie': 'Parametrage/admin/mail.md'       
+        - 'CiviOffice': 'Parametrage/admin/civioffice.md'    
+        - 'CiviRules': 'Parametrage/admin/rules.md' 
+        - 'Utilisateurs et Permisions': 'Parametrage/admin/utilisateurs.md'     
+        - 'Tâches périodiques': 'Parametrage/admin/taches.md'    
+        - 'Purges': 'Parametrage/admin/purges.md'    
+    - 'Paramètres Utilisateurs': 'Parametrage/user.md'
+
+  - Guide utilisateur:
+    - "Demande d'information": 'GuideUser/demandeur/DemandeurInfo.md'
+    - Inscription des donneurs: 
+      - 'Présentation de la fiche donneur': 'GuideUser/donneur/inscription/presentation_fiche.md'
+      - 'Créez la fiche donneur': 'GuideUser/donneur/inscription/creationFicheDonneur.md'
+      - 'Complétez la fiche donneur': 'GuideUser/donneur/inscription/modificationFicheDonneur.md'
+      - 'Imprimez les documents': 'GuideUser/donneur/inscription/impression.md'
+
+    - Si un donneur...: 
+      - 'Annule sa promesse de don': 'GuideUser/donneur/siundonneur/annulation.md'  
+      - 'Demande un duplicata de sa carte': 'GuideUser/donneur/siundonneur/duplicata.md'
+      - 'Participe à un protocole in vivo': 'GuideUser/donneur/siundonneur/protocole.md'
+      - "Fait un don au centre d'accueil des corps": 'GuideUser/donneur/siundonneur/don.md'     
+      - 'Demande des informations par téléphone ou en rendez-vous': 'GuideUser/donneur/siundonneur/telephone.md' 
+
+    - Si une personne référente...:
+      - 'Demande un duplicata de sa carte': 'GuideUser/referente/duplicata_ref.md'
+
+    - Au moment du décès:
+      - 'Arrivée du corps': 'GuideUser/donneur/deces/arrivee.md'
+      - 'Complétez la fiche Donneur': 'GuideUser/donneur/deces/completerdeces.md'
+      - 'Personne ayant qualité pour pourvoir aux funérailles': 'GuideUser/donneur/deces/PAQPF.md'
+
+    - Désidentification des corps et des pièces:
+      - 'Gestion des lieux de conservation': 'GuideUser/donneur/anonymat/lieux.md'
+      - 'Identifiant numérique et utilisations': 'GuideUser/donneur/anonymat/identifiant.md'
+      - 'Tableau de bord des corps présents': 'GuideUser/donneur/anonymat/tableau.md'
+
+    - Après les travaux anatomiques:
+      - 'Préparez le départ du corps du donneur': 'GuideUser/donneur/funerarium/prepadepart.md'
+      - 'Départ du corps': 'GuideUser/donneur/funerarium/depart.md'
+
+    - Cérémonies:
+      - 'Gérez des cérémonies': 'GuideUser/ceremonie/intro.md'
+      - 'Créez un modèle de cérémonie': 'GuideUser/ceremonie/preparation.md'
+      - 'Créez une cérémonie depuis un modèle': 'GuideUser/ceremonie/creation.md'
+      - 'Inscrivez un participant': 'GuideUser/ceremonie/participants.md'
+      - 'Listez les participants': 'GuideUser/ceremonie/liste.md'
+
+    - In Memoriam: 'GuideUser/memoriam.md'
+
+    - Gestion des documents:
+      - 'Documents disponibles': 'GuideUser/documents/docsdispo.md'
+      - 'Modifier un modèle de Documents': 'GuideUser/documents/docsmodif.md'
+      - 'Imprimer un Document': 'GuideUser/documents/docsimprim.md' 
+
+    - Gestion des courriels:
+      - 'Envoyer un courriel individuel': 'GuideUser/mail/one.md'
+      - 'Envoyer un courriel à moins de 50 contacts': 'GuideUser/mail/less50.md'
+      - 'Envoyer un courriel à plus de 50 contacts': 'GuideUser/mail/more50.md'
+
+
+
