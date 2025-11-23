@@ -1,3 +1,12 @@
+Pour écrire les pages 
+cd /Users/destri_c/Documents/doc_DDC/doc_Don_corps
+
+git add --all pour ajouter tous les fichers au commit
+git commit -m "added _README.txt3" : crée un commit added _README.txt3
+git push main main : synchronise les deux reposit
+
+
+
 pour lancer l'environnement virtuel 
 cd /Users/destri_c/Documents/doc_DDC/doc_Don_corps
 source ../venv_mkdocs/bin/activate.csh

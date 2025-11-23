@@ -83,6 +83,7 @@ nav:
       - 'Gestion des lieux de conservation': 'GuideUser/donneur/anonymat/lieux.md'
       - 'Identifiant numérique et utilisations': 'GuideUser/donneur/anonymat/identifiant.md'
       - 'Tableau de bord des corps présents': 'GuideUser/donneur/anonymat/tableau.md'
+      - 'Inventaires': 'GuideUser/donneur/inventaires.md'
 
     - Après les travaux anatomiques:
       - 'Préparez le départ du corps du donneur': 'GuideUser/donneur/funerarium/prepadepart.md'
