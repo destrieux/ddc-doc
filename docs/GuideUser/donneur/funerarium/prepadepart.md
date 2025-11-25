@@ -2,7 +2,7 @@
 Il s'agit de demander la crémation, de compléter la base avec les informations funéraires, et de prévenir la PAQPF de la date de la crémation.
 
 ## Demandez la crémation 
-Affichez le tableau de bord des corps présents : [**Corps et pièces anatomiques > Tableau de bord des corps présents**](../anonymat/tableau.md)
+Affichez le tableau de bord des corps présents : [**Corps et pièces anatomiques > Tableau de bord des corps présents**](../../gestion_pieces/tableau.md)
 
 Vérifiez :
 

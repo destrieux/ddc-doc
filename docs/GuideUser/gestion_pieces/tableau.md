@@ -3,7 +3,7 @@ Allez à **Corps et pièces anatomiques > Tableau de bord des corps présents**
 
 Cette page affiche les corps arrivés (date d'arrivée au CDC antérieure à la date du jour) au laboratoire et non encore sortis pour les opérations funéraires (date de sortie définitive postérieure à la date du jour).
 
-![Tableau de bord des corps présents](../../../img/TableauBord.png)
+![Tableau de bord des corps présents](../../img/TableauBord.png)
 
 Il est possible de trier par n° de décès, par nom, code-barres, médium injecté, localisation, ou mode d'élimination.
 

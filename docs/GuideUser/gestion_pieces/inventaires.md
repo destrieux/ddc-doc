@@ -6,11 +6,11 @@ Les inventaires sont créés sous la forme d'activité de type *Inventaire* depu
 
 **Actions > Inventaire**
 
-![Créer un inventaire](../../../img/Inventaire_creation.png)
+![Créer un inventaire](../../img/Inventaire_creation.png)
 
 Dans le formulaire qui s'ouvre, entrez les numéros de pièces (codes-barres) dans le champ *Détails*, puis **Enregistrer**
 
-![Rmplir le inventaire](../../../img/Inventaire_saisie.png)
+![Rmplir le inventaire](../../img/Inventaire_saisie.png)
 
 Les numéros de pièces et de corps sont comparées à la base de données.
 

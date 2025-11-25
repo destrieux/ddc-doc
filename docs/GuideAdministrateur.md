@@ -1,1 +1,0 @@
-# CiviCRM Don du corps - Guide de l'Administrateur

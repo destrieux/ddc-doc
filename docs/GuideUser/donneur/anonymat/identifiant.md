@@ -74,7 +74,7 @@ A renseigner en cas de sortie de pièce ou de corps.
 > Ne pas oublier de changer la **Localisation** du corps ou de la pièce en modifiant l'**Utilisation**
 
 ### Mode d'élimination  [défaut : *Non éliminée*]
-> Attention si vous passez ce champ à demander crémation, un mail est envoyé automatiquement à votre prestaire funéraire ([cf. tableau de bord des corps présents](tableau.md))
+> Attention si vous passez ce champ à demander crémation, un mail est envoyé automatiquement à votre prestaire funéraire ([cf. tableau de bord des corps présents](../../gestion_pieces/tableau.md))
 
 ### Date d'élimination
 A remplir pour les pièces et non pour les corps, pour lesquels il existe une date d'opérations funéraires.
