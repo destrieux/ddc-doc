@@ -17,4 +17,4 @@ dans l'environnemnt virtuel
 - Pour généréer les pages à la volée : ../venv_mkdocs/bin/mkdocs serve
 
 - Pour publier les pages sur git hub : ../venv_mkdocs/bin/mkdocs gh-deploy -r main
-
+test
