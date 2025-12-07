@@ -37,7 +37,7 @@ nav:
     - 'WordPress': 'GuideAdmin/wordpress/wordpress.md'
     - CiviCRM:
         - 'Installer CiviCRM': 'GuideAdmin/civicrm/installcivi.md'
-        - 'Installer cv et cli': 'GuideAdmin/civicrm/cv.md'
+        - 'Installer unoconv, cv et cli': 'GuideAdmin/civicrm/cv.md'
         - 'Télécharger les extensions indispensables': 'GuideAdmin/civicrm/extensions.md'
         - 'Installer don_corps': 'GuideAdmin/civicrm/doncorps.md'
         - 'Migrer la base de données': 'GuideAdmin/civicrm/migration.md'

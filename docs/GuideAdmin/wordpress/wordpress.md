@@ -14,6 +14,10 @@
 
 * Créez la base de données <br>
 ```cat ~/wp.sql | mysql --defaults-extra-file=/etc/mysql/debian.cnf```
+Normalement, vous pouvez accéder à la base wordpress depuis 
+```http://YOURHOST/phpmyadmin```
+```user : wordpress````
+```password : WORDPRESSPWD```
 
 ## Préparez l'installation de Wordpress
 
@@ -38,7 +42,6 @@
         define( 'DB_PASSWORD', 'WORDPRESSPWD' );
         /** MySQL hostname */
         define( 'DB_HOST', 'localhost' );
-        define('FS_METHOD', 'direct');
 
 * Changez les permissions <br>
 ```chown -R www-data:www-data /var/www/html/ddctest```
@@ -57,7 +60,8 @@
 ```service apache2 reload``` <br>
 
 ## Installez Wordpress
-* dans un navigateur : http://ddc_test/
+* dans un navigateur : ```http://HOSTNAME/wp-admin```<br>
+with HOSTNAME : hostname or IP
 
 * Entrez les informations demandées :
 
