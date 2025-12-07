@@ -557,7 +557,7 @@
   <span class="md-ellipsis">
     
   
-    Installer cv et cli
+    Installer unoconv, cv et cli
   
 
     
@@ -2752,7 +2752,10 @@ FLUSH PRIVILEGES;
 </li>
 <li>
 <p>Créez la base de données <br>
-<code>cat ~/wp.sql | mysql --defaults-extra-file=/etc/mysql/debian.cnf</code></p>
+<code>cat ~/wp.sql | mysql --defaults-extra-file=/etc/mysql/debian.cnf</code>
+Normalement, vous pouvez accéder à la base wordpress depuis 
+<code>http://YOURHOST/phpmyadmin</code>
+<code>user : wordpress````</code>password : WORDPRESSPWD```</p>
 </li>
 </ul>
 <h2 id="preparez-linstallation-de-wordpress">Préparez l'installation de Wordpress<a class="headerlink" href="#preparez-linstallation-de-wordpress" title="Permanent link">&para;</a></h2>
@@ -2780,7 +2783,6 @@ define( &#39;DB_USER&#39;, &#39;wordpress&#39; );
 define( &#39;DB_PASSWORD&#39;, &#39;WORDPRESSPWD&#39; );
 /** MySQL hostname */
 define( &#39;DB_HOST&#39;, &#39;localhost&#39; );
-define(&#39;FS_METHOD&#39;, &#39;direct&#39;);
 </code></pre></div>
 </li>
 <li>
@@ -2809,7 +2811,8 @@ change : ServerAdmin mailadmin@domaine.fr
 <h2 id="installez-wordpress">Installez Wordpress<a class="headerlink" href="#installez-wordpress" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>dans un navigateur : http://ddc_test/</p>
+<p>dans un navigateur : <code>http://HOSTNAME/wp-admin</code><br>
+with HOSTNAME : hostname or IP</p>
 </li>
 <li>
 <p>Entrez les informations demandées :</p>

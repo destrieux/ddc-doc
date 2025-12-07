@@ -27,7 +27,7 @@
     
     
       
-        <title>Installer cv et cli - don_corps</title>
+        <title>Installer unoconv, cv et cli - don_corps</title>
       
     
     
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installer cv et cli
+              Installer unoconv, cv et cli
             
           </span>
         </div>
@@ -477,7 +477,7 @@
   <span class="md-ellipsis">
     
   
-    Installer cv et cli
+    Installer unoconv, cv et cli
   
 
     
@@ -495,7 +495,7 @@
   <span class="md-ellipsis">
     
   
-    Installer cv et cli
+    Installer unoconv, cv et cli
   
 
     
@@ -529,6 +529,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Unoconv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-vous-utilisez-une-version-debian-13-trixie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si vous utilisez une version debian &lt;13 (Trixie)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-vous-utilisez-une-version-debian-12-bookworm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si vous utilisez une version debian &gt; 12 (Bookworm)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pour-tester" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pour tester,
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -550,6 +589,34 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="cv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-cv-nest-pas-installe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si cv n'est pas installé,
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-cv-est-installe-une-aide-va-safficher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si cv est installé, une aide va s'afficher
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2680,6 +2747,45 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Unoconv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-vous-utilisez-une-version-debian-13-trixie" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si vous utilisez une version debian &lt;13 (Trixie)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-vous-utilisez-une-version-debian-12-bookworm" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si vous utilisez une version debian &gt; 12 (Bookworm)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pour-tester" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pour tester,
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -2701,6 +2807,34 @@
       
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="cv">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#si-cv-nest-pas-installe" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si cv n'est pas installé,
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#si-cv-est-installe-une-aide-va-safficher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Si cv est installé, une aide va s'afficher
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2737,11 +2871,45 @@
 
 <h1 id="installer-unoconv-les-codes-barres-cv-et-cli">Installer unoconv, les codes-barres, cv et cli<a class="headerlink" href="#installer-unoconv-les-codes-barres-cv-et-cli" title="Permanent link">&para;</a></h1>
 <h2 id="unoconv">Unoconv<a class="headerlink" href="#unoconv" title="Permanent link">&para;</a></h2>
-<p>Unoconv est un convertisseur qui génère des pdf à partir de documents Word. <br>
-Il a besoin de LibreOffice qui s'installe en même temps que lui.  <br>
-<code>apt-get update</code> <br>
-<code>apt-get install unoconv</code> <br></p>
-<p>Pour tester, <code>unoconv</code> retourne le message suivant : <br>
+<p>Unoconv est un convertisseur qui génère des pdf à partir de documents Word; il est utilisé par l'extension CiviOffice qui génère les documents depuis la base. <br></p>
+<h3 id="si-vous-utilisez-une-version-debian-13-trixie">Si vous utilisez une version debian &lt;13 (Trixie)<a class="headerlink" href="#si-vous-utilisez-une-version-debian-13-trixie" title="Permanent link">&para;</a></h3>
+<p>Unoconv est disponible sous forme de paquet et installe LibreOffice.</p>
+<div class="highlight"><pre><span></span><code>apt-get update 
+apt-get install unoconv
+</code></pre></div>
+<h3 id="si-vous-utilisez-une-version-debian-12-bookworm">Si vous utilisez une version debian &gt; 12 (Bookworm)<a class="headerlink" href="#si-vous-utilisez-une-version-debian-12-bookworm" title="Permanent link">&para;</a></h3>
+<p>Unoconv n'est plus maintenu dans Trixie (13) et va etre remplacé par unoserver, pas encore utilisé par CiviOffice. Vous devez donc l'installer séparément.  <br></p>
+<p>Il a besoin de LibreOffice.  <br></p>
+<div class="highlight"><pre><span></span><code>apt-get update 
+apt-get install libreoffice
+</code></pre></div>
+<p>Il a aussi besoin de du connecteur python UNO qui s'installe normalement avec le paquet LibreOffice.  <br></p>
+<p>Pour rechercher si les librairies sont bien installées : </p>
+<div class="highlight"><pre><span></span><code>cd /tmp
+wget https://gist.githubusercontent.com/regebro/036da022dc7d5241a0ee97efdf1458eb/raw/1bc0655423d196acd79a5d9fa60d2baada8dd534/find_uno.py
+python3 find_uno.py
+</code></pre></div>
+<p>Retourne la liste des installations python avec les librairies LibreOffice installées.</p>
+<p>Pour installer unoconv dans /usr/bin</p>
+<div class="highlight"><pre><span></span><code>cd /usr/bin
+wget https://raw.githubusercontent.com/unoconv/unoconv/refs/heads/master/unoconv
+sudo chmod ugo+x unoconv
+</code></pre></div>
+<p>Modifier le unoconv qui est un script python pour ajouter la version de python à utiliser et remplacer la commande <em>distutils.version</em> (obsolète) par <em>packaging.version</em>.</p>
+<div class="highlight"><pre><span></span><code>nano /usr/bin/unoconv
+</code></pre></div>
+<p>Remplacer la ligne </p>
+<div class="highlight"><pre><span></span><code>#!/usr/bin/env python
+par 
+#!/usr/bin/env python3 (la version retournée plus haut par find_uno.py)
+</code></pre></div>
+<p>et</p>
+<div class="highlight"><pre><span></span><code>from distutils.version import LooseVersion
+par 
+from packaging.version import Version as LooseVersion
+</code></pre></div>
+<h3 id="pour-tester">Pour tester,<a class="headerlink" href="#pour-tester" title="Permanent link">&para;</a></h3>
+<p>Tapez <code>unoconv</code> qui retourne le message suivant : <br>
 <code>unoconv: you have to provide a filename or url as argument</code><br>
 <code>Try unoconv -h for more information.</code> <br></p>
 <h2 id="police-librebarcode39-regularttf">Police LibreBarcode39-Regular.ttf<a class="headerlink" href="#police-librebarcode39-regularttf" title="Permanent link">&para;</a></h2>
@@ -2755,26 +2923,16 @@ Elle est téléchargeable depuis <a href="https://fonts.google.com/specimen/Libr
 <p>cv est une interface en ligne de commandes pour interagir avec CiviCRM. <br>
 Son installation est indispensable à l'utilisation des API et à l'installation en ligne de commandes.</p>
 <p>Vérifiez que cv n'est pas installé en tapant <code>cv</code> dans un terminal :</p>
-<ul>
-<li>
-<p>Si cv n'est pas installé, récupérez <a href="https://download.civicrm.org/cv/cv.phar">cv.phar</a> <br>
-Installez-le en le renommant <em>cv</em> dans un répertoire inclus dans $PATH, par exemple :<br>
-<code>sudo mv cv.phar /usr/local/bin/cv</code><br>
-Et rendez-le exécutable : 
-<code>sudo chmod ug+x /usr/local/bin/cv</code> <br></p>
-</li>
-<li>
-<p>Si cv est installé, une aide va s'afficher</p>
-</li>
-</ul>
+<h3 id="si-cv-nest-pas-installe">Si cv n'est pas installé,<a class="headerlink" href="#si-cv-nest-pas-installe" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>sudo curl -LsS https://download.civicrm.org/cv/cv.phar -o /usr/local/bin/cv
+sudo chmod ug+x /usr/local/bin/cv
+</code></pre></div>
+<h3 id="si-cv-est-installe-une-aide-va-safficher">Si cv est installé, une aide va s'afficher<a class="headerlink" href="#si-cv-est-installe-une-aide-va-safficher" title="Permanent link">&para;</a></h3>
 <h2 id="installer-wp-cli">Installer wp-cli<a class="headerlink" href="#installer-wp-cli" title="Permanent link">&para;</a></h2>
 <p>wp-cli est le langage de communication de CiviCRM avec Wordpress. Il est utilisé pour lancer des tâches programmées.</p>
-<p><code>sudo su</code> <br>
-<code>cd</code><br>
-<code>curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar</code> <br>
-<code>php wp-cli.phar --info (vérifie que tout est ok)</code> <br>
-<code>mv wp-cli.phar /usr/local/bin/wp</code> <br>
-<code>chmod ugo+x /usr/local/bin/wp</code> <br></p>
+<div class="highlight"><pre><span></span><code>sudo curl -LsS https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -o /usr/local/bin/wp
+sudo chmod ug+x /usr/local/bin/wp
+</code></pre></div>
 
 
 

@@ -411,6 +411,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sudo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#php" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -426,6 +437,45 @@
     <span class="md-ellipsis">
       
         Mariadb
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-dun-montage-automatique-samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation d'un montage automatique samba
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation d&#39;un montage automatique samba">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installer-le-client-samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installer le client samba :
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creer-un-montage-automatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créer un montage automatique
       
     </span>
   </a>
@@ -563,7 +613,7 @@
   <span class="md-ellipsis">
     
   
-    Installer cv et cli
+    Installer unoconv, cv et cli
   
 
     
@@ -2699,6 +2749,17 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#sudo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        sudo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#php" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2714,6 +2775,45 @@
     <span class="md-ellipsis">
       
         Mariadb
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-dun-montage-automatique-samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installation d'un montage automatique samba
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Installation d&#39;un montage automatique samba">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installer-le-client-samba" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installer le client samba :
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creer-un-montage-automatique" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Créer un montage automatique
       
     </span>
   </a>
@@ -2752,16 +2852,24 @@
 <li>Machine virtuelle, 2 CPU,</li>
 <li>16 Go de RAM,</li>
 <li>16 Go de disque ; à augmenter en fonction du nombre de documents qui sont stockés sur le serveur (scan des promesses de don, documents générés...),</li>
-<li>Debian récente, 11 ou supérieure,</li>
+<li>Debian récente, 11 ou supérieure,<blockquote>
+<p>A partir de Trixie (debian13), le paquet unoconv n'est plus maintenu. Si vous utilisez une version supérieure à 12, vous devez <a href="../../civicrm/cv/">l'installer manuellement</a>. </p>
+</blockquote>
+</li>
 <li>Serveur Apache,</li>
 <li>PHP version 8 ou supérieure.</li>
+<li>Mariadb 11.8.3</li>
 </ul>
 <h2 id="installation-du-serveur-lamp">Installation du serveur LAMP<a class="headerlink" href="#installation-du-serveur-lamp" title="Permanent link">&para;</a></h2>
+<h3 id="sudo">sudo<a class="headerlink" href="#sudo" title="Permanent link">&para;</a></h3>
+<p>Installer sudo: <br>
+<code>su -s</code>
+<code>apt-get install sudo</code></p>
 <h3 id="php">PHP<a class="headerlink" href="#php" title="Permanent link">&para;</a></h3>
 <p>Pour installer PHP et les paquets demandés par CiviCRM : <br>
 <code>apt-get install php composer libapache2-mod-php php-pear php-cgi php-common php-mbstring php-zip php-net-socket php-gd php-xml-util php-mysql php-bcmath php-intl php-imagick unzip wget curl git -y</code></p>
 <p>Bien vérifier que les fonctions d'internationalisation de PHP sont activées : <br>
-la ligne <code>;extension=intl</code> doit être décommentée dans <strong>les deux</strong> fichiers : </p>
+la ligne <code>;extension=intl</code> doit être décommentée dans <strong>les deux</strong> fichiers (supprimer le ; initial): </p>
 <ul>
 <li>/etc/php/VERSION/apache2/php.ini</li>
 <li>/etc/php/VERSION/cli/php.ini</li>
@@ -2770,7 +2878,8 @@ la ligne <code>;extension=intl</code> doit être décommentée dans <strong>les 
 <ul>
 <li>
 <p>Installer Mariadb (au moins v. 10.5 sinon certaines requêtes ne marchent pas) et phpmyadmin <br>
-<code>apt-get install mariadb-server mariadb-client phpmyadmin -y</code></p>
+<code>apt-get install mariadb-server mariadb-client phpmyadmin -y</code>
+Lors de l'installation, choisir apache2 et création automatique d'un mdp pour phpmyadmin</p>
 </li>
 <li>
 <p>Démarrer Mariadb <br>
@@ -2781,28 +2890,83 @@ la ligne <code>;extension=intl</code> doit être décommentée dans <strong>les 
 <code>systemctl enable mariadb</code></p>
 </li>
 <li>
-<p>Sécuriser madiadb <br>
-<code>`mysql_secure_installation</code> <br>
-Entrez les informations : mdp root Mariadb, suppression utilisateurs anonymes, désactiver accès root distants, supprimer base test :</p>
-<ul>
-<li>Enter current password for root (enter for none):</li>
-<li>Change the root password? [Y/n] Y</li>
-<li>New password: <MARIADBPASSWD></li>
-<li>Remove anonymous users? [Y/n] Y</li>
-<li>Disallow root login remotely? [Y/n] Y</li>
-<li>Remove test database and access to it? [Y/n] Y</li>
-<li>Reload privilege tables now? [Y/n] Y</li>
-</ul>
-</li>
-<li>
 <p>Mettre en place la timezone <br>
-<code>mysql_tzinfo_to_sql /usr/share/zoneinfo | mysql -u root mysql</code></p>
+<code>mariadb-tzinfo-to-sql /usr/share/zoneinfo | mysql -u root mysql</code></p>
 </li>
 <li>
 <p>Redémarrer Mariadb <br>
 <code>systemctl restart mariadb</code></p>
 </li>
 </ul>
+<h2 id="installation-dun-montage-automatique-samba">Installation d'un montage automatique samba<a class="headerlink" href="#installation-dun-montage-automatique-samba" title="Permanent link">&para;</a></h2>
+<p>CiviOffice est une extension de CiviCRM qui génère les documents (courriers, cartes...) à partir de <a href="../../../Parametrage/user/">modèles modifiables par l'utilisateur</a> avec un systeme de jetons remontant des informations de la base de données.</p>
+<p>Le plus pratique est de disposer d'un volume partagé, modifiable par l'utilisateur et visible par le serveur. Vous pouvez par exemple créer un partage samba sur un serveur de fichier (par exemple <em>//monserveur.univ-XXX.fr/civicrm *) qui exportera un répertoire *civicrm</em> vers votre serveur CiviCRM.</p>
+<h3 id="installer-le-client-samba">Installer le client samba :<a class="headerlink" href="#installer-le-client-samba" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>apt-get install samba
+</code></pre></div>
+<h3 id="creer-un-montage-automatique">Créer un montage automatique<a class="headerlink" href="#creer-un-montage-automatique" title="Permanent link">&para;</a></h3>
+<p>Le répertoire civicrm exporté par monserveur.univ-XXX.fr doit être accessible à l'utilisateur <em>civicrm</em> ayant <em>civicrm_SMPPWD</em> comme mot de passe, dans le domaine DOMAIN. </p>
+<p>Ces informations sont stockées dans un fichier <em>.smbcreds</em> seulement lisible par root : </p>
+<div class="highlight"><pre><span></span><code>nano /etc/samba/.smbcreds
+
+username=civicrm
+password=civicrm_SMPPWD
+domaine=DOMAIN
+
+chmod go-rwx /etc/samba/.smbcreds
+</code></pre></div>
+<p>Créer un point de montage <em>/mnt/smb</em></p>
+<div class="highlight"><pre><span></span><code>mkdir /mnt/smb
+</code></pre></div>
+<p>Créerune unité systemd qui montera le volume à la demande sur le point de montage <em>/mnt/smb</em>. Il faut créer deux fichiers pour le montage mannuel et le montage automatique : </p>
+<blockquote>
+<p>ATTENTION : le nom des deux ficher dépend du point de montage. Si celui-ci est /mnt/smb, les fichers <strong>doivent</strong> être nommés <em>mnt-smb.mount</em> et <em>mnt-smb.automount</em> (le chemin vers ces fichiers en remplaçant "/" par "-".)</p>
+</blockquote>
+<p><strong>Pour le montage manuel</strong></p>
+<div class="highlight"><pre><span></span><code>nano /etc/systemd/system/mnt-smb-sambashare.mount
+
+[Unit]
+Description=partage
+StartLimitIntervalSec=0
+
+[Mount]
+Type=cifs
+What=//monserveur.univ-XXX.fr/civicrm
+Where=/mnt/smb/sambashare
+Options=uid=0,credentials=/etc/samba/.smbcreds,iocharset=utf8,vers=3.0
+TimeoutSec=10
+
+[Install]
+WantedBy=multi-user.target
+</code></pre></div>
+<blockquote>
+<p><em>What</em> : ce qui est monté, <em>Where</em> : le point de montage, <em>Options</em> : notamment les identifiants</p>
+</blockquote>
+<p><strong>Pour le montage automatique</strong></p>
+<div class="highlight"><pre><span></span><code>nano /etc/systemd/system/mnt-smb-sambashare.automount
+
+[Unit]
+Description=samba automount for yourfiles
+
+[Automount]
+Where=/mnt/smb/sambashare
+
+
+[Install]
+WantedBy=multi-user.target
+</code></pre></div>
+<blockquote>
+<p>Les deux fichiers doivent être créés.</p>
+</blockquote>
+<p><strong>Recharger le service</strong></p>
+<div class="highlight"><pre><span></span><code>systemctl daemon-reload
+</code></pre></div>
+<p><strong>Activation de l'unité automount</strong></p>
+<div class="highlight"><pre><span></span><code>systemctl enable --now mnt-smb-sambashare.automount
+</code></pre></div>
+<p>Pour vérifier qu'elle est active : </p>
+<div class="highlight"><pre><span></span><code>systemctl
+</code></pre></div>
 
 
 

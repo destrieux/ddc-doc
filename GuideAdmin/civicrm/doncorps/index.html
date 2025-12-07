@@ -468,7 +468,7 @@
   <span class="md-ellipsis">
     
   
-    Installer cv et cli
+    Installer unoconv, cv et cli
   
 
     
@@ -2606,8 +2606,9 @@
 <ul>
 <li>Téléchargez l'extension <a href="https://github.com/destrieux/don_corps/archive/refs/heads/main.zip">don_corps</a> <br>
 Déplacez là et décompactez là dans : <br>
-<code>/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/</code><br></li>
-<li>• Rafraîchissez CiviCRM<br>
+<code>/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/</code><br>
+<code>chown -R www-data:www-data /var/www/html/ddctest/wp-content/</code></li>
+<li>Rafraîchissez CiviCRM<br>
 <code>cd /var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/don_corps</code><br>
 <code>cv flush</code> <br></li>
 <li>Lancez l'installation<br>
