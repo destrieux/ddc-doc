@@ -79,4 +79,4 @@ Vérifiez que cv n'est pas installé en tapant ```cv``` dans un terminal :
 wp-cli est le langage de communication de CiviCRM avec Wordpress. Il est utilisé pour lancer des tâches programmées.
 
     sudo curl -LsS https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli.phar -o /usr/local/bin/wp
-    sudo chmod ug+x /usr/local/bin/wp
+    sudo chmod ugo+x /usr/local/bin/wp

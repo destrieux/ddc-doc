@@ -4,7 +4,7 @@
 Vous pouvez définir ici plusieurs adresses d'expédition (secrétarait, techniciens...).<br>
 Il est conseillé à l'administrateur de créer des adresses fonctionnelles de messagerie et de les inscrire ici.
 
-Allez à **Administrer > Communication > Site From email adresses**, <br>
+Allez à **Administrer > Communication > Adresses Courriel (From) du site**, <br>
 **Ajouter une adresse de courriel**.
 
 * **Nom affiché** : celui qui s'affichera lors du choix de l'expéditeur et dans les courriels,

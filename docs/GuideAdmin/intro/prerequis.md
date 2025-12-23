@@ -122,3 +122,8 @@ Créerune unité systemd qui montera le volume à la demande sur le point de mon
 Pour vérifier qu'elle est active : 
 
     systemctl
+
+## sendmail
+Sera utilisé pour que CiviCRM expédie les courriels.
+
+    apt-get install sendmail

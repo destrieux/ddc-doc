@@ -9,6 +9,10 @@ Cette metatâche programmée, *job.execute*, est elle-même lancée par www-data
 
 Pour plus d'infos : [https://docs.civicrm.org/sysadmin/en/latest/setup/jobs/](https://docs.civicrm.org/sysadmin/en/latest/setup/jobs/)
 
+## Créer un utilisateur *cronuser* dans Wordpress
+Allez à **Comptes > Ajouter un Compte**<br>
+Créer un utilisateur *cronuser* avec les droits Administrateur de Wordpress.
+
 ## Installer wp-cli 
 **wp-cli** est le langage de communication de CiviCRM avec Wordpress. Il est utilisé pour lancer des tâches programmées.
 
