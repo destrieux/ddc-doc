@@ -8,13 +8,15 @@ La purge des données comporte plusieurs étapes :
 
 > Pour que l'API fonctionne, vous devez avoir installé [cv](../../GuideAdmin/civicrm/cv.md) préalablement.
 
-## Définir le fichier de log des purges : <br>
-```nano /var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/ddctest/api/v3/Contact/Purge.php``` <br>
+## Définir le fichier de log des purges (optionnel): <br>
 
-Modifiez à la valeur souhaitée : <br>
-    ```$logfile = "/var/www/html/ddctest/wp-content/uploads/civicrm/ConfigAndLog.purge.log"```
+Les logs des purges s'écrivent par défaut dans **/var/www/html/ddctest/wp-content/uploads/civicrm/ConfigAndLog.purge.log**. Si vous souhaitez modifier la localisation de ce fichier :
+```nano /var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/don_corps/api/v3/Contact/Purge.php``` <br>
+
+Modifiez à la valeur souhaitée : la variable ```$logfile ```
 
 ## Lancez les purges à la main 
+```cd /var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/don_corps/```<br>
 ```cv api Contact.Purge``` <br>
 Les groupes de purges sont traités et les contacts sont supprimés ou leur identité est modifiée pour *Anonymisé ANONYMISE*.
 
@@ -22,7 +24,7 @@ Les groupes de purges sont traités et les contacts sont supprimés ou leur iden
 Une tâche Call Contact.Purge peut lancer la purge automatiquement chaque jour : <br>
 **Administrer > Paramètres Système > Tache programmées**
 
-Elle est désactivée par défaut. 
+Elle est activée par défaut. 
 
-Pour l'activer, allez dans la ligne de cette tâche sur **plus > Activer**
+Pour la désactiver, allez dans la ligne de cette tâche sur **plus > Désctiver**
 

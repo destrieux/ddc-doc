@@ -5,6 +5,7 @@ Le système comporte de nombreux modèles de courriers dont la description est d
 Ce sont des documents Word que vous pouvez modifier.
 Avant la première utilisation, vous devez revoir chacun de ces documents pour utiliser votre propre en-tête.
 > Prenez bien garde à ne pas modifier les *tokens* qui sont du texte encadré par accolades {} et correspondent à des informations qui sont récupérées dans la base pour générer les courriers.
+> Si vous souhaitez ajouter des *tokens* à vos documents, leur liste est disponible dans **CiviOffice > Available tokens**
 
 ## Personnels du centre de don du corps
 Les utilisateurs créés par l'administrateur dans Wordpress sont normalement automatiquement créés dans la base mais ne sont pas rattachés à votre organisation. <br>
