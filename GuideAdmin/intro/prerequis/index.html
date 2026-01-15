@@ -1448,7 +1448,7 @@
 <ul>
 <li>Machine virtuelle, 2 CPU,</li>
 <li>16 Go de RAM,</li>
-<li>16 Go de disque ; à augmenter en fonction du nombre de documents qui sont stockés sur le serveur (scan des promesses de don, documents générés...),</li>
+<li>100 Go de disque ; à adapter en fonction du nombre de documents qui sont stockés sur le serveur (scan des promesses de don, documents générés...),</li>
 <li>Debian récente, 11 ou supérieure,<blockquote>
 <p>A partir de Trixie (debian13), le paquet unoconv n'est plus maintenu. Si vous utilisez une version supérieure à 12, vous devez <a href="../../civicrm/cv/">l'installer manuellement</a>. </p>
 </blockquote>
@@ -1456,6 +1456,8 @@
 <li>Serveur Apache,</li>
 <li>PHP version 8 ou supérieure.</li>
 <li>Mariadb 11.8.3</li>
+<li>Ouverture des ports 80/443/22</li>
+<li>Dossiers à sauvegarder: /var/lib/mysql et /var/www</li>
 </ul>
 <h2 id="installation-du-serveur-lamp">Installation du serveur LAMP<a class="headerlink" href="#installation-du-serveur-lamp" title="Permanent link">&para;</a></h2>
 <h3 id="sudo">sudo<a class="headerlink" href="#sudo" title="Permanent link">&para;</a></h3>
