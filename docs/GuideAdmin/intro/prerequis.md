@@ -4,12 +4,14 @@ L'application est utilisée sur une machine ayant les caractéristiques suivante
 
 * Machine virtuelle, 2 CPU,
 * 16 Go de RAM,
-* 16 Go de disque ; à augmenter en fonction du nombre de documents qui sont stockés sur le serveur (scan des promesses de don, documents générés...),
+* 100 Go de disque ; à adapter en fonction du nombre de documents qui sont stockés sur le serveur (scan des promesses de don, documents générés...),
 * Debian récente, 11 ou supérieure,
 > A partir de Trixie (debian13), le paquet unoconv n'est plus maintenu. Si vous utilisez une version supérieure à 12, vous devez [l'installer manuellement](../civicrm/cv.md). 
 * Serveur Apache,
 * PHP version 8 ou supérieure.
 * Mariadb 11.8.3
+* Ouverture des ports 80/443/22
+* Dossiers à sauvegarder: /var/lib/mysql et /var/www
 
 ## Installation du serveur LAMP
 ### sudo
