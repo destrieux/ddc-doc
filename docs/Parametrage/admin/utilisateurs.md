@@ -10,7 +10,8 @@ Par privilège décroissant :
 
 ## Les récupérer dans CiviCRM
 **Administration > utilisateurs et permissions > synchroniser**. <br>
-Crée un utilisateur CiviCRM par utilisateur Wordpress.
+Crée un utilisateur CiviCRM par utilisateur Wordpress. 
+> Dans les versions récentes de CiviCRM, cette étape n'est pas obligatoire et la migration depuis Wordpress se fait seule.
 
 ## Régler les permissions
 Les permissions dans CiviCRM sont gérées par le statut dans Wordpress :
