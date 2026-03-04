@@ -1475,11 +1475,16 @@ la ligne <code>;extension=intl</code> doit être décommentée dans <strong>les 
 </ul>
 <h3 id="mariadb">Mariadb<a class="headerlink" href="#mariadb" title="Permanent link">&para;</a></h3>
 <ul>
-<li>
-<p>Installer Mariadb (au moins v. 10.5 sinon certaines requêtes ne marchent pas) et phpmyadmin <br>
-<code>apt-get install mariadb-server mariadb-client phpmyadmin -y</code>
-Lors de l'installation, choisir apache2 et création automatique d'un mdp pour phpmyadmin</p>
-</li>
+<li>Installer Mariadb (au moins v. 10.5 sinon certaines requêtes ne marchent pas) et phpmyadmin <br>
+<code>apt-get install mariadb-server mariadb-client phpmyadmin -y</code></li>
+</ul>
+<p>Lors de l'installation, choisir apache2 et création automatique d'un mdp pour phpmyadmin</p>
+<ul>
+<li>Sécuriser Mariadb <br>
+<code>mariadb-secure-installation</code></li>
+</ul>
+<p>Définir un mot de passe root pour Mariadb (MARIADB_ROOT_PWD), supprimez les accès anonymes, la base test et les accès distants.</p>
+<ul>
 <li>
 <p>Démarrer Mariadb <br>
 <code>systemctl start mariadb</code></p>
@@ -1495,6 +1500,13 @@ Lors de l'installation, choisir apache2 et création automatique d'un mdp pour p
 <li>
 <p>Redémarrer Mariadb <br>
 <code>systemctl restart mariadb</code></p>
+</li>
+<li>
+<p>Accéder à la base via Phpmyadmin 
+Vous pouvez accéder à la base wordpress depuis 
+<code>http://YOURHOST/phpmyadmin</code><br>
+<code>user : root</code><br>
+<code>password : MARIADB_ROOT_PWD</code><br></p>
 </li>
 </ul>
 <h2 id="installation-dun-montage-automatique-samba">Installation d'un montage automatique samba<a class="headerlink" href="#installation-dun-montage-automatique-samba" title="Permanent link">&para;</a></h2>
@@ -1517,7 +1529,7 @@ chmod go-rwx /etc/samba/.smbcreds
 <p>Créer un point de montage <em>/mnt/smb</em></p>
 <div class="highlight"><pre><span></span><code>mkdir /mnt/smb
 </code></pre></div>
-<p>Créerune unité systemd qui montera le volume à la demande sur le point de montage <em>/mnt/smb</em>. Il faut créer deux fichiers pour le montage mannuel et le montage automatique : </p>
+<p>Créer une unité systemd qui montera le volume à la demande sur le point de montage <em>/mnt/smb</em>. Il faut créer deux fichiers pour le montage mannuel et le montage automatique : </p>
 <blockquote>
 <p>ATTENTION : le nom des deux ficher dépend du point de montage. Si celui-ci est /mnt/smb, les fichers <strong>doivent</strong> être nommés <em>mnt-smb.mount</em> et <em>mnt-smb.automount</em> (le chemin vers ces fichiers en remplaçant "/" par "-".)</p>
 </blockquote>

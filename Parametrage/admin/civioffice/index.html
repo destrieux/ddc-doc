@@ -1276,7 +1276,9 @@ L'idéal est d'avoir un point de montage, par exemple <em>smb</em>, accessible p
 <li><em>Path to the unoconv executable</em> : le chemin vers <em>unoconv</em>, que vous pouvez récupérer par <code>which unoconv</code> <br>
 unoconv doit avoir été <a href="../../../GuideAdmin/civicrm/cv/">installé préalablement</a> <br></li>
 <li><em>Path to a lock file</em> : le chemin du ficher de lock<blockquote>
-<p>Attention ce fichier doit être modifiable par l'utilisateur <em>www-data</em>**</p>
+<p>Attention ce fichier doit exister et être modifiable par l'utilisateur <em>www-data</em>**
+<code>touch /var/www/unoconv.lock</code><br>
+<code>chown www-data:www-data /var/www/unoconv.lock</code><br></p>
 </blockquote>
 </li>
 <li><em>Temporary directory</em> : répertoire temporaire, par ex. /tmp</li>

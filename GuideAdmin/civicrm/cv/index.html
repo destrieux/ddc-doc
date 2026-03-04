@@ -1448,15 +1448,17 @@
 <h2 id="unoconv">Unoconv<a class="headerlink" href="#unoconv" title="Permanent link">&para;</a></h2>
 <p>Unoconv est un convertisseur qui génère des pdf à partir de documents Word; il est utilisé par l'extension CiviOffice qui génère les documents depuis la base. <br></p>
 <h3 id="si-vous-utilisez-une-version-debian-13-trixie">Si vous utilisez une version debian &lt;13 (Trixie)<a class="headerlink" href="#si-vous-utilisez-une-version-debian-13-trixie" title="Permanent link">&para;</a></h3>
-<p>Unoconv est disponible sous forme de paquet et installe LibreOffice.</p>
+<p>Unoconv est disponible sous forme de paquet et installe LibreOffice. Il a besoin du paquet python packaging pour fonctionner</p>
 <div class="highlight"><pre><span></span><code>apt-get update 
+apt-install python3-packaging
 apt-get install unoconv
 </code></pre></div>
 <h3 id="si-vous-utilisez-une-version-debian-12-bookworm">Si vous utilisez une version debian &gt; 12 (Bookworm)<a class="headerlink" href="#si-vous-utilisez-une-version-debian-12-bookworm" title="Permanent link">&para;</a></h3>
 <p>Unoconv n'est plus maintenu dans Trixie (13) et va etre remplacé par unoserver, pas encore utilisé par CiviOffice. Vous devez donc l'installer séparément.  <br></p>
-<p>Il a besoin de LibreOffice.  <br></p>
+<p>Il a besoin de LibreOffice et de python-packaging.  <br></p>
 <div class="highlight"><pre><span></span><code>apt-get update 
-apt-get install libreoffice
+apt-get install libreoffice 
+apt-get install python3-packaging
 </code></pre></div>
 <p>Il a aussi besoin de du connecteur python UNO qui s'installe normalement avec le paquet LibreOffice.  <br></p>
 <p>Pour rechercher si les librairies sont bien installées : </p>
@@ -1490,7 +1492,8 @@ from packaging.version import Version as LooseVersion
 <h2 id="police-librebarcode39-regularttf">Police LibreBarcode39-Regular.ttf<a class="headerlink" href="#police-librebarcode39-regularttf" title="Permanent link">&para;</a></h2>
 <p>Elle sera utile pour imprimer des codes-barres. <br>
 Elle est téléchargeable depuis <a href="https://fonts.google.com/specimen/Libre+Barcode+39">Google Fonts</a>.</p>
-<p><code>cp LibreBarcode39-Regular.ttf /usr/local/share/fonts/</code> <br>
+<p><code>cp Libre_Barcode_39.zip /usr/local/share/fonts/</code> <br>
+<code>unzip /usr/local/share/fonts/Libre_Barcode_39.zip</code><br>
 <code>chmod 644 /usr/local/share/fonts/LibreBarcode39-Regular.ttf</code> <br>
 <code>fc-list | grep LibreBarcode39</code> <br></p>
 <p>La dernière commande vérifie que la police est bien disponible ; elle doit retourner son chemin.</p>
