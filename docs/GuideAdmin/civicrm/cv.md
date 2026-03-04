@@ -2,18 +2,20 @@
 ## Unoconv
 Unoconv est un convertisseur qui génère des pdf à partir de documents Word; il est utilisé par l'extension CiviOffice qui génère les documents depuis la base. <br>
 ### Si vous utilisez une version debian <13 (Trixie)
-Unoconv est disponible sous forme de paquet et installe LibreOffice.
+Unoconv est disponible sous forme de paquet et installe LibreOffice. Il a besoin du paquet python packaging pour fonctionner
 
     apt-get update 
+    apt-install python3-packaging
     apt-get install unoconv 
 
 ### Si vous utilisez une version debian > 12 (Bookworm)
 Unoconv n'est plus maintenu dans Trixie (13) et va etre remplacé par unoserver, pas encore utilisé par CiviOffice. Vous devez donc l'installer séparément.  <br>
 
-Il a besoin de LibreOffice.  <br>
+Il a besoin de LibreOffice et de python-packaging.  <br>
 
     apt-get update 
     apt-get install libreoffice 
+    apt-get install python3-packaging
 
 Il a aussi besoin de du connecteur python UNO qui s'installe normalement avec le paquet LibreOffice.  <br>
 
@@ -56,7 +58,8 @@ Tapez ```unoconv``` qui retourne le message suivant : <br>
 Elle sera utile pour imprimer des codes-barres. <br>
 Elle est téléchargeable depuis [Google Fonts](https://fonts.google.com/specimen/Libre+Barcode+39).
 
-```cp LibreBarcode39-Regular.ttf /usr/local/share/fonts/``` <br>
+```cp Libre_Barcode_39.zip /usr/local/share/fonts/``` <br>
+```unzip /usr/local/share/fonts/Libre_Barcode_39.zip```<br>
 ```chmod 644 /usr/local/share/fonts/LibreBarcode39-Regular.ttf``` <br>
 ```fc-list | grep LibreBarcode39``` <br>
 

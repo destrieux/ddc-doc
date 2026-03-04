@@ -1,5 +1,16 @@
 # Organisation par défaut
 Il s'agit de votre centre d'accueil des corps. Les informations entrées ici seront reprises dans les courriers.<br>
+
+## Fusionnez avec l'organisation par défaut
+Le paquet don du corps est fourni avec les coordonnées des centres français et lors de l'installation une *organisation par défaut* est crée. Il vous faut fusionner cette dernier avec votre centre.
+
+Allez à **Rechercher > Tous contacts** et cocher *Default Organization* et votre organisation.
+
+Puis dans action choisissez dudupe-merge. Cocher les inforamtions que vous souhaitez migrer vers l'organisation par défaut, puis **Fusionner**
+
+## Completez les informations
+Certaines infos ne sont pas remontées par l'opération précédente. Elles sont importantes pour générer des courriers.
+
 Allez à : **Administrer > Communication > Adresse de l'organisation et infos de contact**
 
 * **Nom de l'organisation** : nom complet de votre centre (ex. *Centre d'accueil des corps de XXX*),

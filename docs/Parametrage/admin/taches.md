@@ -44,7 +44,7 @@ Par exemple, pour lancer job.execute toutes les 5 minutes:
 Remplacer ```/usr/local/bin/wp --user=cronuser --url=http://SITE --path=/var/www/html/ddctest civicrm api job.execute auth=0``` <br>par la ligne testée plus haut (remplacer CHEMIN et SITE)
 
 ## Définir les tâches à réaliser périodiquement
-Dans **Administrer > Paramètres Systèmes > Travaux programmés,** <br>
+Dans **Administrer > Paramètres Systèmes > Tâches programmées,** <br>
 choisir les taches à faire tourner automatiquement, par exemple :
 
 * CiviCRM update check (quotidienne),

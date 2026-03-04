@@ -13,11 +13,7 @@
         FLUSH PRIVILEGES;
 
 * Créez la base de données <br>
-```cat ~/wp.sql | mysql --defaults-extra-file=/etc/mysql/debian.cnf```
-Normalement, vous pouvez accéder à la base wordpress depuis 
-```http://YOURHOST/phpmyadmin```
-```user : wordpress````
-```password : WORDPRESSPWD```
+```cat ~/wp.sql | mysql --defaults-extra-file=/etc/mysql/debian.cnf```<br>
 
 ## Préparez l'installation de Wordpress
 
@@ -52,7 +48,7 @@ Normalement, vous pouvez accéder à la base wordpress depuis
 ```nano ddctest.conf```<br>
 
         change : DocumentRoot /var/www/html/ddctest
-        change : ServerAdmin mailadmin@domaine.fr
+        change : ServerAdmin ADMINISTRATOR_EMAIL_ADRESS
 
 * Désactivez l'hôte virtuel par défaut, activez le site et relancez le serveur web. <br>
 ```a2dissite 000-default``` <br>
@@ -69,3 +65,12 @@ with HOSTNAME : hostname or IP
     * titre du site : ddctest,
     * identifiant : USERWORDPRESS,
     * password : MDPUSERWORDPRESS.
+
+* Une fois l'installation terminée, supprimez le ficher d'installation.
+```rm ~/wp.sql```<br>
+
+## Installez les extensions wordpress (hors CiviCRM)
+
+* Password Policy Manager
+Cette extension interdit les mots de passe faibles
+Allez dans Extensions > Ajouter une extension pour rechercher puis installer cette extension et régler les parametres souhaités.

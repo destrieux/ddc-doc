@@ -1,6 +1,6 @@
 # Installation de l'extension don_corps
 * Téléchargez l'extension [don_corps](https://github.com/destrieux/don_corps/archive/refs/heads/main.zip) <br>
-Déplacez là et décompactez là dans : <br>
+En su, déplacez là et décompactez là dans : <br>
 ```/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/```<br>
 ```chown -R www-data:www-data /var/www/html/ddctest/wp-content/```
 * Rafraîchissez CiviCRM<br>

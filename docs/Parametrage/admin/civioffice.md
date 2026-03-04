@@ -13,7 +13,9 @@ L'idéal est d'avoir un point de montage, par exemple *smb*, accessible par le s
     * *Path to the unoconv executable* : le chemin vers *unoconv*, que vous pouvez récupérer par ```which unoconv``` <br>
     unoconv doit avoir été [installé préalablement](../../GuideAdmin/civicrm/cv.md) <br>
     * *Path to a lock file* : le chemin du ficher de lock
-    > Attention ce fichier doit être modifiable par l'utilisateur *www-data***
+    > Attention ce fichier doit exister et être modifiable par l'utilisateur *www-data***
+    ```touch /var/www/unoconv.lock```<br>
+    ```chown www-data:www-data /var/www/unoconv.lock```<br>
     * *Temporary directory* : répertoire temporaire, par ex. /tmp
     * *Use PHPWord macros for token replacement* : à cocher
     > Si tout va bien Ready to use passe à *oui*

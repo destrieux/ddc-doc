@@ -33,7 +33,13 @@ la ligne ```;extension=intl``` doit être décommentée dans **les deux** fichie
 
 * Installer Mariadb (au moins v. 10.5 sinon certaines requêtes ne marchent pas) et phpmyadmin <br>
 ```apt-get install mariadb-server mariadb-client phpmyadmin -y```
+
 Lors de l'installation, choisir apache2 et création automatique d'un mdp pour phpmyadmin
+
+* Sécuriser Mariadb <br>
+```mariadb-secure-installation```
+
+Définir un mot de passe root pour Mariadb (MARIADB_ROOT_PWD), supprimez les accès anonymes, la base test et les accès distants.
 
 * Démarrer Mariadb <br>
 ```systemctl start mariadb```
@@ -46,6 +52,12 @@ Lors de l'installation, choisir apache2 et création automatique d'un mdp pour p
 
 * Redémarrer Mariadb <br>
 ```systemctl restart mariadb```
+
+* Accéder à la base via Phpmyadmin 
+Vous pouvez accéder à la base wordpress depuis 
+```http://YOURHOST/phpmyadmin```<br>
+```user : root```<br>
+```password : MARIADB_ROOT_PWD```<br>
 
 ## Installation d'un montage automatique samba
 CiviOffice est une extension de CiviCRM qui génère les documents (courriers, cartes...) à partir de [modèles modifiables par l'utilisateur](../../Parametrage/user.md) avec un systeme de jetons remontant des informations de la base de données.
@@ -73,7 +85,7 @@ Créer un point de montage */mnt/smb*
 
     mkdir /mnt/smb
 
-Créerune unité systemd qui montera le volume à la demande sur le point de montage */mnt/smb*. Il faut créer deux fichiers pour le montage mannuel et le montage automatique : 
+Créer une unité systemd qui montera le volume à la demande sur le point de montage */mnt/smb*. Il faut créer deux fichiers pour le montage mannuel et le montage automatique : 
 
 > ATTENTION : le nom des deux ficher dépend du point de montage. Si celui-ci est /mnt/smb, les fichers **doivent** être nommés *mnt-smb.mount* et *mnt-smb.automount* (le chemin vers ces fichiers en remplaçant "/" par "-".)
 
