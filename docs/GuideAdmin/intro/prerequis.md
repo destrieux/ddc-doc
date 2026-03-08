@@ -59,16 +59,16 @@ Vous pouvez accéder à la base wordpress depuis
 ```user : root```<br>
 ```password : MARIADB_ROOT_PWD```<br>
 
-## Installation d'un montage automatique samba
+## Montage d'un volume samba partagé
 CiviOffice est une extension de CiviCRM qui génère les documents (courriers, cartes...) à partir de [modèles modifiables par l'utilisateur](../../Parametrage/user.md) avec un systeme de jetons remontant des informations de la base de données.
 
-Le plus pratique est de disposer d'un volume partagé, modifiable par l'utilisateur et visible par le serveur. Vous pouvez par exemple créer un partage samba sur un serveur de fichier (par exemple *//monserveur.univ-XXX.fr/civicrm *) qui exportera un répertoire *civicrm* vers votre serveur CiviCRM.
+Le plus pratique est de disposer d'un volume partagé, modifiable par l'utilisateur et visible par le serveur. Vous pouvez par exemple créer un partage samba sur un serveur de fichier (par exemple *//monserveur.univ-XXX.fr/civicrm*) qui exportera un répertoire *civicrm* vers votre serveur CiviCRM.
 
 ### Installer le client samba :
 
     apt-get install samba
 
-### Créer un montage automatique 
+### Créer un fichier contenant les identifiants pour accéder au serveur
 Le répertoire civicrm exporté par monserveur.univ-XXX.fr doit être accessible à l'utilisateur *civicrm* ayant *civicrm_SMPPWD* comme mot de passe, dans le domaine DOMAIN. 
 
 Ces informations sont stockées dans un fichier *.smbcreds* seulement lisible par root : 
@@ -80,10 +80,40 @@ Ces informations sont stockées dans un fichier *.smbcreds* seulement lisible pa
     domaine=DOMAIN
 
     chmod go-rwx /etc/samba/.smbcreds
+    chuser root:root /etc/samba/.smbcreds
 
-Créer un point de montage */mnt/smb*
+> Attention à bien modifier les permissions et l'utilisateur sinon le repertoire serait ouvert à tous
+
+### Créer un point de montage
 
     mkdir /mnt/smb
+
+### Modifier le fichier fstab
+
+    nano /etc/fstab
+
+Ajouter cette ligne : 
+
+    //monserveur.univ-XXX.fr/civicrm /mnt/smb cifs credentials=/etc/samba/.smbcreds,iocharset=utf8,uid=0,nofail 0       0   
+
+- //monserveur.univ-XXX.fr : nom du serveur exportant le - - repertoire à monter <br>
+- /civicrm : repertoire à monter<br>
+- /mnt/smb : point de montage sur le client<br>
+- cifs : c'est un répertoire samba<br>
+- credentials=/etc/samba/.smbcreds : chemin vers le fichier contenant les identifiants<br>
+- iocharset=utf8 : enocdage des caractères<br>
+- nofail : ne bloque pas le demarrage de la machine si le répertoire à monter est indisponible<br>
+
+### Monter ce volume
+    mount -a
+
+Normalement le contenu du repertoire civicrm sur le serveur samba est visible par 
+
+    ls /mnt/samba
+
+
+
+<!-- ### Créer un montage automatique 
 
 Créer une unité systemd qui montera le volume à la demande sur le point de montage */mnt/smb*. Il faut créer deux fichiers pour le montage mannuel et le montage automatique : 
 
@@ -135,7 +165,7 @@ Créer une unité systemd qui montera le volume à la demande sur le point de mo
 
 Pour vérifier qu'elle est active : 
 
-    systemctl
+    systemctl -->
 
 ## sendmail
 Sera utilisé pour que CiviCRM expédie les courriels.
