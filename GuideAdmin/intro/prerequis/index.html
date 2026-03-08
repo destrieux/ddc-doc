@@ -331,8 +331,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-dun-montage-automatique-samba" class="md-nav__link">
-    Installation d'un montage automatique samba
+  <a href="#montage-dun-volume-samba-partage" class="md-nav__link">
+    Montage d'un volume samba partagé
   </a>
   
     <nav class="md-nav">
@@ -346,8 +346,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#creer-un-montage-automatique" class="md-nav__link">
-    Créer un montage automatique
+  <a href="#creer-un-fichier-contenant-les-identifiants-pour-acceder-au-serveur" class="md-nav__link">
+    Créer un fichier contenant les identifiants pour accéder au serveur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creer-un-point-de-montage" class="md-nav__link">
+    Créer un point de montage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifier-le-fichier-fstab" class="md-nav__link">
+    Modifier le fichier fstab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monter-ce-volume" class="md-nav__link">
+    Monter ce volume
   </a>
   
 </li>
@@ -1390,8 +1411,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#installation-dun-montage-automatique-samba" class="md-nav__link">
-    Installation d'un montage automatique samba
+  <a href="#montage-dun-volume-samba-partage" class="md-nav__link">
+    Montage d'un volume samba partagé
   </a>
   
     <nav class="md-nav">
@@ -1405,8 +1426,29 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#creer-un-montage-automatique" class="md-nav__link">
-    Créer un montage automatique
+  <a href="#creer-un-fichier-contenant-les-identifiants-pour-acceder-au-serveur" class="md-nav__link">
+    Créer un fichier contenant les identifiants pour accéder au serveur
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creer-un-point-de-montage" class="md-nav__link">
+    Créer un point de montage
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifier-le-fichier-fstab" class="md-nav__link">
+    Modifier le fichier fstab
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#monter-ce-volume" class="md-nav__link">
+    Monter ce volume
   </a>
   
 </li>
@@ -1509,13 +1551,13 @@ Vous pouvez accéder à la base wordpress depuis
 <code>password : MARIADB_ROOT_PWD</code><br></p>
 </li>
 </ul>
-<h2 id="installation-dun-montage-automatique-samba">Installation d'un montage automatique samba<a class="headerlink" href="#installation-dun-montage-automatique-samba" title="Permanent link">&para;</a></h2>
+<h2 id="montage-dun-volume-samba-partage">Montage d'un volume samba partagé<a class="headerlink" href="#montage-dun-volume-samba-partage" title="Permanent link">&para;</a></h2>
 <p>CiviOffice est une extension de CiviCRM qui génère les documents (courriers, cartes...) à partir de <a href="../../../Parametrage/user/">modèles modifiables par l'utilisateur</a> avec un systeme de jetons remontant des informations de la base de données.</p>
-<p>Le plus pratique est de disposer d'un volume partagé, modifiable par l'utilisateur et visible par le serveur. Vous pouvez par exemple créer un partage samba sur un serveur de fichier (par exemple <em>//monserveur.univ-XXX.fr/civicrm *) qui exportera un répertoire *civicrm</em> vers votre serveur CiviCRM.</p>
+<p>Le plus pratique est de disposer d'un volume partagé, modifiable par l'utilisateur et visible par le serveur. Vous pouvez par exemple créer un partage samba sur un serveur de fichier (par exemple <em>//monserveur.univ-XXX.fr/civicrm</em>) qui exportera un répertoire <em>civicrm</em> vers votre serveur CiviCRM.</p>
 <h3 id="installer-le-client-samba">Installer le client samba :<a class="headerlink" href="#installer-le-client-samba" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>apt-get install samba
 </code></pre></div>
-<h3 id="creer-un-montage-automatique">Créer un montage automatique<a class="headerlink" href="#creer-un-montage-automatique" title="Permanent link">&para;</a></h3>
+<h3 id="creer-un-fichier-contenant-les-identifiants-pour-acceder-au-serveur">Créer un fichier contenant les identifiants pour accéder au serveur<a class="headerlink" href="#creer-un-fichier-contenant-les-identifiants-pour-acceder-au-serveur" title="Permanent link">&para;</a></h3>
 <p>Le répertoire civicrm exporté par monserveur.univ-XXX.fr doit être accessible à l'utilisateur <em>civicrm</em> ayant <em>civicrm_SMPPWD</em> comme mot de passe, dans le domaine DOMAIN. </p>
 <p>Ces informations sont stockées dans un fichier <em>.smbcreds</em> seulement lisible par root : </p>
 <div class="highlight"><pre><span></span><code>nano /etc/samba/.smbcreds
@@ -1525,59 +1567,89 @@ password=civicrm_SMPPWD
 domaine=DOMAIN
 
 chmod go-rwx /etc/samba/.smbcreds
+chuser root:root /etc/samba/.smbcreds
 </code></pre></div>
-<p>Créer un point de montage <em>/mnt/smb</em></p>
+<blockquote>
+<p>Attention à bien modifier les permissions et l'utilisateur sinon le repertoire serait ouvert à tous</p>
+</blockquote>
+<h3 id="creer-un-point-de-montage">Créer un point de montage<a class="headerlink" href="#creer-un-point-de-montage" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>mkdir /mnt/smb
 </code></pre></div>
-<p>Créer une unité systemd qui montera le volume à la demande sur le point de montage <em>/mnt/smb</em>. Il faut créer deux fichiers pour le montage mannuel et le montage automatique : </p>
-<blockquote>
-<p>ATTENTION : le nom des deux ficher dépend du point de montage. Si celui-ci est /mnt/smb, les fichers <strong>doivent</strong> être nommés <em>mnt-smb.mount</em> et <em>mnt-smb.automount</em> (le chemin vers ces fichiers en remplaçant "/" par "-".)</p>
-</blockquote>
-<p><strong>Pour le montage manuel</strong></p>
-<div class="highlight"><pre><span></span><code>nano /etc/systemd/system/mnt-smb-sambashare.mount
-
-[Unit]
-Description=partage
-StartLimitIntervalSec=0
-
-[Mount]
-Type=cifs
-What=//monserveur.univ-XXX.fr/civicrm
-Where=/mnt/smb/sambashare
-Options=uid=0,credentials=/etc/samba/.smbcreds,iocharset=utf8,vers=3.0
-TimeoutSec=10
-
-[Install]
-WantedBy=multi-user.target
+<h3 id="modifier-le-fichier-fstab">Modifier le fichier fstab<a class="headerlink" href="#modifier-le-fichier-fstab" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>nano /etc/fstab
 </code></pre></div>
-<blockquote>
-<p><em>What</em> : ce qui est monté, <em>Where</em> : le point de montage, <em>Options</em> : notamment les identifiants</p>
-</blockquote>
-<p><strong>Pour le montage automatique</strong></p>
-<div class="highlight"><pre><span></span><code>nano /etc/systemd/system/mnt-smb-sambashare.automount
-
-[Unit]
-Description=samba automount for yourfiles
-
-[Automount]
-Where=/mnt/smb/sambashare
-
-
-[Install]
-WantedBy=multi-user.target
+<p>Ajouter cette ligne : </p>
+<div class="highlight"><pre><span></span><code>//monserveur.univ-XXX.fr/civicrm /mnt/smb cifs credentials=/etc/samba/.smbcreds,iocharset=utf8,uid=0,nofail 0       0
 </code></pre></div>
-<blockquote>
-<p>Les deux fichiers doivent être créés.</p>
-</blockquote>
-<p><strong>Recharger le service</strong></p>
-<div class="highlight"><pre><span></span><code>systemctl daemon-reload
+<ul>
+<li>//monserveur.univ-XXX.fr : nom du serveur exportant le - - repertoire à monter <br></li>
+<li>/civicrm : repertoire à monter<br></li>
+<li>/mnt/smb : point de montage sur le client<br></li>
+<li>cifs : c'est un répertoire samba<br></li>
+<li>credentials=/etc/samba/.smbcreds : chemin vers le fichier contenant les identifiants<br></li>
+<li>iocharset=utf8 : enocdage des caractères<br></li>
+<li>nofail : ne bloque pas le demarrage de la machine si le répertoire à monter est indisponible<br></li>
+</ul>
+<h3 id="monter-ce-volume">Monter ce volume<a class="headerlink" href="#monter-ce-volume" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>mount -a
 </code></pre></div>
-<p><strong>Activation de l'unité automount</strong></p>
-<div class="highlight"><pre><span></span><code>systemctl enable --now mnt-smb-sambashare.automount
+<p>Normalement le contenu du repertoire civicrm sur le serveur samba est visible par </p>
+<div class="highlight"><pre><span></span><code>ls /mnt/samba
 </code></pre></div>
-<p>Pour vérifier qu'elle est active : </p>
-<div class="highlight"><pre><span></span><code>systemctl
-</code></pre></div>
+<!-- ### Créer un montage automatique 
+
+Créer une unité systemd qui montera le volume à la demande sur le point de montage */mnt/smb*. Il faut créer deux fichiers pour le montage mannuel et le montage automatique : 
+
+> ATTENTION : le nom des deux ficher dépend du point de montage. Si celui-ci est /mnt/smb, les fichers **doivent** être nommés *mnt-smb.mount* et *mnt-smb.automount* (le chemin vers ces fichiers en remplaçant "/" par "-".)
+
+**Pour le montage manuel**
+
+    nano /etc/systemd/system/mnt-smb-sambashare.mount
+
+    [Unit]
+    Description=partage
+    StartLimitIntervalSec=0
+
+    [Mount]
+    Type=cifs
+    What=//monserveur.univ-XXX.fr/civicrm
+    Where=/mnt/smb/sambashare
+    Options=uid=0,credentials=/etc/samba/.smbcreds,iocharset=utf8,vers=3.0
+    TimeoutSec=10
+
+    [Install]
+    WantedBy=multi-user.target
+
+> *What* : ce qui est monté, *Where* : le point de montage, *Options* : notamment les identifiants
+
+**Pour le montage automatique**
+
+    nano /etc/systemd/system/mnt-smb-sambashare.automount
+
+    [Unit]
+    Description=samba automount for yourfiles
+
+    [Automount]
+    Where=/mnt/smb/sambashare
+
+
+    [Install]
+    WantedBy=multi-user.target
+
+> Les deux fichiers doivent être créés.
+
+**Recharger le service**
+
+    systemctl daemon-reload
+
+**Activation de l'unité automount**
+
+    systemctl enable --now mnt-smb-sambashare.automount
+
+Pour vérifier qu'elle est active : 
+
+    systemctl -->
+
 <h2 id="sendmail">sendmail<a class="headerlink" href="#sendmail" title="Permanent link">&para;</a></h2>
 <p>Sera utilisé pour que CiviCRM expédie les courriels.</p>
 <div class="highlight"><pre><span></span><code>apt-get install sendmail
