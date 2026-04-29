@@ -8,6 +8,8 @@ La fiche donneur peut être crée à partir de celle d'un demandeur d'informatio
 
 ![Modificationtype de contact](../../../img/Donneur_depuis_demandeur1.png)
 
+> Depuis la v2.0.0, le nom principal est le nom patronymique (de naissance), le nom marital est inscrit en nom d'usage.
+
 * Cliquez sur **Type de Contact** et choisissez **Donneur**. <br>
 Rechargez la page pour afficher la fiche Donneur.
 

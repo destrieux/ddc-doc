@@ -57,6 +57,7 @@ nav:
     - 'Paramètres Utilisateurs': 'Parametrage/user.md'
 
   - Guide utilisateur:
+    - "Contacts dans CiviCRM": 'GuideUser/contacts/recherche_contact.md'
     - "Demande d'information": 'GuideUser/demandeur/DemandeurInfo.md'
     - Inscription des donneurs: 
       - 'Présentation de la fiche donneur': 'GuideUser/donneur/inscription/presentation_fiche.md'

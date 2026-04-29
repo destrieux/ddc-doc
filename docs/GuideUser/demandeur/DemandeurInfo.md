@@ -8,6 +8,8 @@ Allez à : <strong>Contacts > Nouveau Demandeur d'information</strong> et rempli
 
 ![Inscription d'un demandeur d'information](../../img/demandeur_creation.png)
 
+> Depuis la v2.0.0, le nom principal est le nom patronymique (de naissance), le nom marital est inscrit en nom d'usage.
+
 Après avoir enregistré, une fiche plus complète s'ouvre. <br>
 Complétez les informations de contact (adresse, email, téléphone). <br>
 La date d'envoi des informations permet la purge des personnes n'ayant pas donné suite après un an.
