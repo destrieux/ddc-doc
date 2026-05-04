@@ -15,7 +15,7 @@ Si vous cliquez sur une des actions vous pouvez voir le détail de cette action 
 L'arrêté du 11 juillet 2023 précise que **La procédure de gestion des informations doit permettre une traçabilité complète sur toutes les opérations effectuées en terme de saisie et de consultation*<br>
 Il est donc fortement recommandé d'activer la journalisation étendue.
 
-# Comment activer la journalisation étendue
+# Comment activer la journalisation étendue ?
 ## Installer l'extension *Advanced logging with Changelog*
 * la télécharger 
 [lab.civicrm.org](https://lab.civicrm.org/extensions/advloggingwithchangelog/-/archive/master/advloggingwithchangelog-master.zip?ref_type=heads)
