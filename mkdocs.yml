@@ -39,6 +39,7 @@ nav:
         - 'Installer CiviCRM': 'GuideAdmin/civicrm/installcivi.md'
         - 'Installer unoconv, cv et cli': 'GuideAdmin/civicrm/cv.md'
         - 'Télécharger les extensions indispensables': 'GuideAdmin/civicrm/extensions.md'
+        - 'Installez la journalisation détaillée' : 'GuideAdmin/civicrm/journalisation.md'
         - 'Installer don_corps': 'GuideAdmin/civicrm/doncorps.md'
         - 'Migrer la base de données': 'GuideAdmin/civicrm/migration.md'
         - 'Mise à jour de CiviCRM': 'GuideAdmin/civicrm/majcivi.md'
