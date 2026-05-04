@@ -3,14 +3,14 @@
 Par défaut CiviCRM journalise de façon sommaire des actions réalisées sur les contacts. <br>
 Pour les visualiser aller sur la fiche du contact > *Onglet Journal des modifications* : 
 
-![Journalisation simple](../../../img/Journal1.png)
+![Journalisation simple](../../img/journal1.png)
 
 Cette commande affiche qui est intervenu sur le dossier et à quelle date mais pas le type d'action.
 ## Journalisation étendue
 Il est possible de journaliser à quel moment qui a fait quoi. Le même onglet affiche alors une vue plus détaillée des actions réalisées. <br>
 Si vous cliquez sur une des actions vous pouvez voir le détail de cette action et il est possible de revenir à l'état antérieur en cliquant sur *Rétablir ces changements*
 
-![Journalisation étendue](../../../img/Journal2.png)
+![Journalisation étendue](../../img/journal2.png)
 
 L'arrêté du 11 juillet 2023 précise que **La procédure de gestion des informations doit permettre une traçabilité complète sur toutes les opérations effectuées en terme de saisie et de consultation*<br>
 Il est donc fortement recommandé d'activer la journalisation étendue.
