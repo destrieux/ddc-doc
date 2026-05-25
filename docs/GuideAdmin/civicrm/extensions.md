@@ -12,6 +12,8 @@ org.civicrm.afform_admin | Génère les formulaires de recherche à partir de re
 [org.civicrm.contactlayout](https://lab.civicrm.org/extensions/contactlayout/-/archive/master/contactlayout-master.zip?ref_type=heads) | Gère les grilles d'affichage des contacts
 [de.systopia.eventmessages](https://github.com/systopia/de.systopia.eventmessages/archive/refs/heads/master.zip) | Envoi les courriels relatifs aux évènements (cérémonies...) 
 [sktokens](https://lab.civicrm.org/extensions/sktokens/-/archive/main/sktokens-main.zip?ref_type=heads) | Crée des tokens depuis la base de données, utilisables dans les messages 
+[Advanced logging with Changelog](https://lab.civicrm.org/extensions/advloggingwithchangelog/-/archive/master/advloggingwithchangelog-master.zip?ref_type=heads) | Combine les journalisations simples (qui a fait) et complexes (quoi et quand)
+
 
 > Pour le moment l'extension [FrenchCodesPostaux](https://github.com/allinappli/frenchCodePost-civicrm) qui utilise l'API de la poste pour compléter les adresses est incompatible avec org.civicrm.contactlayout
 

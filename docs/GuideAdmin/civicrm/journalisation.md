@@ -21,7 +21,7 @@ Il est donc fortement recommandé d'activer la journalisation étendue.
 [lab.civicrm.org](https://lab.civicrm.org/extensions/advloggingwithchangelog/-/archive/master/advloggingwithchangelog-master.zip?ref_type=heads)
 * copier l'archive et dézippez là dans le dossier : <br>
 ```/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/```<br>
-* Allez dans Administrer > Parmètres Système > Extensions > Actualiser
+* Allez dans Administrer > Paramètres Système > Extensions > Actualiser
 * L'extension apparait dans la liste
 * Cliquez sur installer
 ## Créer une base de donnée dédiée

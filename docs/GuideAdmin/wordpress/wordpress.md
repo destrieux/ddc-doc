@@ -73,4 +73,6 @@ with HOSTNAME : hostname or IP
 
 * Password Policy Manager
 Cette extension interdit les mots de passe faibles
-Allez dans Extensions > Ajouter une extension pour rechercher puis installer cette extension et régler les parametres souhaités.
+Allez dans Extensions > Ajouter une extension pour rechercher puis installer cette extension et régler les parametres souhaités. L'arrété du 11/7/2023 stipule que la politique des mots de passe suive la délibération de la CNIL 2022-100 du 21 juillet 2022 : minimum 12 caractères, minuscules, majuscules, chiffres et caractères spéciaux.   
+* WP user activity
+Cette extension journalise les accès au site wordpress, en conformité avec l'arrêté du 11/7/2023.

@@ -6,6 +6,12 @@ site_author: 'Chrisotphe Destrieux'
 theme:
   name:
     material
+  logo:
+    img/UT_logo.png
+  favicon:
+    img/UT_logo.png
+extra_css:
+  - stylesheets/extra.css
 
 nav:
 - Home: index.md

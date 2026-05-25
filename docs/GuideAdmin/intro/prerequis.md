@@ -6,7 +6,13 @@ L'application est utilisée sur une machine ayant les caractéristiques suivante
 * 16 Go de RAM,
 * 100 Go de disque ; à adapter en fonction du nombre de documents qui sont stockés sur le serveur (scan des promesses de don, documents générés...),
 * Debian récente, 11 ou supérieure,
-> A partir de Trixie (debian13), le paquet unoconv n'est plus maintenu. Si vous utilisez une version supérieure à 12, vous devez [l'installer manuellement](../civicrm/cv.md). 
+
+> Pour répondre aux exigences de l'arrêté du 11 juillet 2023, le volume contenant les données doit être chiffré en utilisant *l’algorithme AES et [une] longueur de [...] clé [...] d’au moins 256 bits*. <br>
+
+> il est conseillé de [chiffrer le disque au moment de l'installation du système](https://www.debian.org/releases/stable/amd64/ch06s03.fr.html#di-partition) en utilisant l'option *LVM avec chiffrement* lors du partitiionement assisté.<br>
+
+> Il est aussi possible de [chiffrer *a posteriori* la partition /var](./chiffrement_var.md), contenant la base de données et les documents liés sur un système existant.<br>
+
 * Serveur Apache,
 * PHP version 8 ou supérieure.
 * Mariadb 11.8.3
@@ -58,6 +64,11 @@ Vous pouvez accéder à la base wordpress depuis
 ```http://YOURHOST/phpmyadmin```<br>
 ```user : root```<br>
 ```password : MARIADB_ROOT_PWD```<br>
+
+## Unoconv
+Unoconv est utilisé pour générer des pdf à partir de documents docx. <br>
+
+A partir de Trixie (debian13), le paquet unoconv n'est plus maintenu. Si vous utilisez une version supérieure à 12, vous devez [l'installer manuellement](../civicrm/cv.md). 
 
 ## Montage d'un volume samba partagé
 CiviOffice est une extension de CiviCRM qui génère les documents (courriers, cartes...) à partir de [modèles modifiables par l'utilisateur](../../Parametrage/user.md) avec un systeme de jetons remontant des informations de la base de données.
