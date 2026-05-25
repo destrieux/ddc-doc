@@ -8,9 +8,9 @@ theme:
   name:
     material
   logo:
-    img/UT_logo.png
+    img/UT_Logo.png
   favicon:
-    img/UT_logo.png
+    img/UT_Logo.png
 extra_css:
   - stylesheets/extra.css
 
