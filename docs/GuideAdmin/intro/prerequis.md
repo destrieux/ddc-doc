@@ -177,6 +177,11 @@ Créer une unité systemd qui montera le volume à la demande sur le point de mo
 Pour vérifier qu'elle est active : 
 
     systemctl -->
+### Copier les modèles de courriers dans ce volume
+
+* L'extension *don du corps* est livrée avec des courriers types qui sont dans *don_corps/docs/modeles_civicrm_vierges*
+* Copiez les dans le volume partagé
+* Les gestionnaires devront [ajouter les entetes et signatures propres à l'établissement](../../GuideUser/documents/docsmodif.md),
 
 ## sendmail
 Sera utilisé pour que CiviCRM expédie les courriels.
