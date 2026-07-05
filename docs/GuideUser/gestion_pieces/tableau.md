@@ -11,3 +11,10 @@ Il est possible de trier par n° de décès, par nom, code-barres, médium injec
         - si une restitution était souhaitée par le donneur, <br>
         - si un numéro de décès n'a pas été attribué, <br>
         - ou si un stimulateur cardiaque n'a pas été retiré ou si son absence n'a pas été vérifiée.
+
+Il est possible d'imprimer une étiquette comportant l'identifiant numérique du corps, si une restitution est demandée et si des effets personnels doivent être remis à la famille ou détruits : 
+
+* Sélectionnez le corps pour lequel l'étiquette doit être imprimée
+* **Action > Create Documents**, choisir *081-ETIQUETTES-Corps.docx*
+
+![Etiquette_corps](../../img/Etiquette_corps.png)

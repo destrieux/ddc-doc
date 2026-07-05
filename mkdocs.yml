@@ -95,6 +95,7 @@ nav:
       
     - Gestion des pièces et des corps:
       - 'Tableau de bord des corps présents': 'GuideUser/gestion_pieces/tableau.md'
+      - 'Tableau de bord des pièces présentes': 'GuideUser/gestion_pieces/tableau_pieces.md'
       - 'Inventaires': 'GuideUser/gestion_pieces/inventaires.md'
       - 'Déplacement en lot': 'GuideUser/gestion_pieces/deplacelot.md'
       - 'Suppression en lot': 'GuideUser/gestion_pieces/supprimelot.md'
