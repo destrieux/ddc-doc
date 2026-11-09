@@ -39,6 +39,9 @@
         /** MySQL hostname */
         define( 'DB_HOST', 'localhost' );
 
+        /** desactivation de l'affichage des bugs sinon erreur lors chargement des contacts de la corbeille*/
+        define('WP_DEBUG_DISPLAY', false);
+
 * Changez les permissions <br>
 ```chown -R www-data:www-data /var/www/html/ddctest```
 ## Créez le site

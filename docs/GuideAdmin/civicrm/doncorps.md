@@ -8,5 +8,6 @@ En su, déplacez là et décompactez là dans : <br>
 ```cv flush``` <br>
 * Lancez l'installation<br>
 ```cv ext:enable don_corps``` <br>
+(en mode verbose : cv -vvv ext:enable don_corps)<br>
 
 > Ne pas installer en mode graphique car l'installation est longue (installation de don_corps et des autres extensions nécessaire) et échouerait en raison d'un time-out.
