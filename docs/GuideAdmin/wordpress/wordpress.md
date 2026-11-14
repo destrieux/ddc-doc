@@ -39,9 +39,6 @@
         /** MySQL hostname */
         define( 'DB_HOST', 'localhost' );
 
-        /** desactivation de l'affichage des bugs sinon erreur lors chargement des contacts de la corbeille*/
-        define('WP_DEBUG_DISPLAY', false);
-
 * Changez les permissions <br>
 ```chown -R www-data:www-data /var/www/html/ddctest```
 ## Créez le site
@@ -69,8 +66,11 @@ with HOSTNAME : hostname or IP
     * identifiant : USERWORDPRESS,
     * password : MDPUSERWORDPRESS.
 
-* Une fois l'installation terminée, supprimez le ficher d'installation.
-```rm ~/wp.sql```<br>
+* Une fois l'installation terminée, supprimez le ficher d'installation.<br>
+```rm ~/wp.sql```
+
+* Modifiez les permissions de wp-config.php<br>
+```chmod 640 /var/www/html/ddctest/wp-config.php```
 
 ## Installez les extensions wordpress (hors CiviCRM)
 

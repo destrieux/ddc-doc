@@ -22,7 +22,7 @@ La [documentation officielle est disponible ici](https://docs.civicrm.org/sysadm
 > Les versions CiviCRM > 6 incluent les fichiers linguistiques qu'il n'est plus nécessaire de traiter séparément
 
 * Changer les permissions de CiviCRM <br>
-```chown -R www-data:www-data /var/www/html/ddctest/wp-content/plugins/civicrm``` <br>
+```chown -R www-data:www-data /var/www/html/ddctest/wp-content/plugins/civicrm``` <br> 
 
 ## Lancer l'installeur CiviCRM
 * Connectez-vous à l'interface d'administration du site Wordpress <br> ```https://ddctest/wp-admin/``` avec des permissions admin. <br>
@@ -33,6 +33,8 @@ La [documentation officielle est disponible ici](https://docs.civicrm.org/sysadm
 ```Langue: français``` <br>
 Modifier la base civicrm : ```mysql://civicrm:<MDPCIVICRM>@localhost/civicrm```
 
+* Une fois l'installation terminée, modifiez les droits de civicrm-settings.php<br>
+```chmod 640 /var/www/html/ddctest/wp-content/uploads/civicrm/civicrm-settings.php```
 
 ## Si le site Wordpress devient inaccessible après l'installation de CiviCRM
 L'installation peut parfois rendre Wordpress inaccessible  en raison d'une erreur d'installation.

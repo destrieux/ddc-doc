@@ -18,11 +18,18 @@ org.civicrm.afform_admin | Génère les formulaires de recherche à partir de re
 > Pour le moment l'extension [FrenchCodesPostaux](https://github.com/allinappli/frenchCodePost-civicrm) qui utilise l'API de la poste pour compléter les adresses est incompatible avec org.civicrm.contactlayout
 
 ## Téléchargement des extensions 
+> Historiquement, les extensions étaient situées dans le dossier : ```/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/``` qui est écrasé à chaque mise à jour de CivCRM, avec un risque de perdre vos extensions.<br> 
+> Elles sont maintenant dans : ```/var/www/html/ddctest/wp-content/uploads/civicrm/ext/``` qui n'est pas modifié par la mise à jour de CiviCRM.<br>
+> Vous pouvez déplacer vos extensions (pas les copier, une seule copie doit être présente) vers ```/var/www/html/ddctest/wp-content/uploads/civicrm/ext/```<br>
+> Puis ```cv flush``` pour que CiviCRM les localise à nouveau
+
 * Vous pouvez télécharger la dernière version de chacune des extensions en suivant les liens du tableau ci-dessus. <br>
 Chaque extension doit être téléchargée et dézippée dans le dossier : <br>
-```/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/```<br>
+```/var/www/html/ddctest/wp-content/uploads/civicrm/ext/```<br>
+
 * Vous pouvez aussi utiliser une archive contenant les extensions nécessaires en une fois <br>
 L'archive doit être téléchargée et dézippée dans le dossier : <br>
-```/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/```<br>
+```/var/www/html/ddctest/wp-content/uploads/civicrm/ext/```<br>
 
 > Il n'est pas nécessaire d'installer les extensions à ce stade, mais seulement de les télécharger et de les déposer dans le dossier *ad hoc*; <br> Elles s'installeront en même temps que l'extension *don_corps*.
+
