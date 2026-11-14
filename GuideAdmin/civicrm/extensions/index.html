@@ -1404,13 +1404,23 @@
 <p>Pour le moment l'extension <a href="https://github.com/allinappli/frenchCodePost-civicrm">FrenchCodesPostaux</a> qui utilise l'API de la poste pour compléter les adresses est incompatible avec org.civicrm.contactlayout</p>
 </blockquote>
 <h2 id="telechargement-des-extensions_1">Téléchargement des extensions<a class="headerlink" href="#telechargement-des-extensions_1" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>Historiquement, les extensions étaient situées dans le dossier : <code>/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/</code> qui est écrasé à chaque mise à jour de CivCRM, avec un risque de perdre vos extensions.<br> 
+Elles sont maintenant dans : <code>/var/www/html/ddctest/wp-content/uploads/civicrm/ext/</code> qui n'est pas modifié par la mise à jour de CiviCRM.<br>
+Vous pouvez déplacer vos extensions (pas les copier, une seule copie doit être présente) vers <code>/var/www/html/ddctest/wp-content/uploads/civicrm/ext/</code><br>
+Puis <code>cv flush</code> pour que CiviCRM les localise à nouveau</p>
+</blockquote>
 <ul>
-<li>Vous pouvez télécharger la dernière version de chacune des extensions en suivant les liens du tableau ci-dessus. <br>
+<li>
+<p>Vous pouvez télécharger la dernière version de chacune des extensions en suivant les liens du tableau ci-dessus. <br>
 Chaque extension doit être téléchargée et dézippée dans le dossier : <br>
-<code>/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/</code><br></li>
-<li>Vous pouvez aussi utiliser une archive contenant les extensions nécessaires en une fois <br>
+<code>/var/www/html/ddctest/wp-content/uploads/civicrm/ext/</code><br></p>
+</li>
+<li>
+<p>Vous pouvez aussi utiliser une archive contenant les extensions nécessaires en une fois <br>
 L'archive doit être téléchargée et dézippée dans le dossier : <br>
-<code>/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/</code><br></li>
+<code>/var/www/html/ddctest/wp-content/uploads/civicrm/ext/</code><br></p>
+</li>
 </ul>
 <blockquote>
 <p>Il n'est pas nécessaire d'installer les extensions à ce stade, mais seulement de les télécharger et de les déposer dans le dossier <em>ad hoc</em>; <br> Elles s'installeront en même temps que l'extension <em>don_corps</em>.</p>

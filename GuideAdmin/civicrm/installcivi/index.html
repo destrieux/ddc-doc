@@ -1422,7 +1422,7 @@ Néanmoins, il est préférable de créer une base distincte, par exemple <em>ci
 </blockquote>
 <ul>
 <li>Changer les permissions de CiviCRM <br>
-<code>chown -R www-data:www-data /var/www/html/ddctest/wp-content/plugins/civicrm</code> <br></li>
+<code>chown -R www-data:www-data /var/www/html/ddctest/wp-content/plugins/civicrm</code> <br> </li>
 </ul>
 <h2 id="lancer-linstalleur-civicrm">Lancer l'installeur CiviCRM<a class="headerlink" href="#lancer-linstalleur-civicrm" title="Permanent link">&para;</a></h2>
 <ul>
@@ -1435,6 +1435,10 @@ Néanmoins, il est préférable de créer une base distincte, par exemple <em>ci
 <p>Allez dans les extensions de Wordpress et activez CiviCRM pour lancer l'installation <br>
 <code>Langue: français</code> <br>
 Modifier la base civicrm : <code>mysql://civicrm:&lt;MDPCIVICRM&gt;@localhost/civicrm</code></p>
+</li>
+<li>
+<p>Une fois l'installation terminée, modifiez les droits de civicrm-settings.php<br>
+<code>chmod 640 /var/www/html/ddctest/wp-content/uploads/civicrm/civicrm-settings.php</code></p>
 </li>
 </ul>
 <h2 id="si-le-site-wordpress-devient-inaccessible-apres-linstallation-de-civicrm">Si le site Wordpress devient inaccessible après l'installation de CiviCRM<a class="headerlink" href="#si-le-site-wordpress-devient-inaccessible-apres-linstallation-de-civicrm" title="Permanent link">&para;</a></h2>

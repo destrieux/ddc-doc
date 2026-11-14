@@ -1307,13 +1307,14 @@
 <ul>
 <li>Téléchargez l'extension <a href="https://github.com/destrieux/don_corps/archive/refs/heads/main.zip">don_corps</a> <br>
 En su, déplacez là et décompactez là dans : <br>
-<code>/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/</code><br>
-<code>chown -R www-data:www-data /var/www/html/ddctest/wp-content/</code></li>
+<code>/var/www/html/ddctest/wp-content/uploads/civicrm/ext/</code><br>
+<code>chown -R www-data:www-data /var/www/html/ddctest/wp-content/uploads/civicrm/ext/don_corps</code></li>
 <li>Rafraîchissez CiviCRM<br>
-<code>cd /var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/don_corps</code><br>
+<code>cd /var/www/html/ddctest/wp-content/uploads/civicrm/ext/don_corps</code><br>
 <code>cv flush</code> <br></li>
 <li>Lancez l'installation<br>
-<code>cv ext:enable don_corps</code> <br></li>
+<code>cv ext:enable don_corps</code> <br>
+(en mode verbose : cv -vvv ext:enable don_corps)<br></li>
 </ul>
 <blockquote>
 <p>Ne pas installer en mode graphique car l'installation est longue (installation de don_corps et des autres extensions nécessaire) et échouerait en raison d'un time-out.</p>
