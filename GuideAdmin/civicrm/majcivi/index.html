@@ -432,8 +432,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#restaurez-les-extensions" class="md-nav__link">
-    Restaurez les extensions
+  <a href="#si-votre-site-est-ancien-restaurez-les-extensions" class="md-nav__link">
+    Si votre site est ancien : Restaurez les extensions
   </a>
   
 </li>
@@ -1215,10 +1215,118 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-12" type="checkbox" id="nav-4-12">
     
     <label class="md-nav__link" for="nav-4-12">
-      Gestion des documents
+      Activités et Saisines
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-4-12">
+        Activités et Saisines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GuideUser/evenements/intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GuideUser/evenements/creer_activite/" title="Créer une activité" class="md-nav__link">
+      Créer une activité
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GuideUser/evenements/lister_activites/" title="Lister les activités - Devis" class="md-nav__link">
+      Lister les activités - Devis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GuideUser/evenements/creer_saisine/" title="Créer une saisine" class="md-nav__link">
+      Créer une saisine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GuideUser/evenements/lister_saisines.md" title="Lister les saisines" class="md-nav__link">
+      Lister les saisines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GuideUser/calendrier/" title="Calendrier" class="md-nav__link">
+      Calendrier
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GuideUser/rapports/" title="Rapports d'activité" class="md-nav__link">
+      Rapports d'activité
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-15" type="checkbox" id="nav-4-15">
+    
+    <label class="md-nav__link" for="nav-4-15">
+      Gestion des documents
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-15">
         Gestion des documents
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1272,13 +1380,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-13" type="checkbox" id="nav-4-13">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-16" type="checkbox" id="nav-4-16">
     
-    <label class="md-nav__link" for="nav-4-13">
+    <label class="md-nav__link" for="nav-4-16">
       Gestion des courriels
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-13">
+      <label class="md-nav__title" for="nav-4-16">
         Gestion des courriels
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1372,8 +1480,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#restaurez-les-extensions" class="md-nav__link">
-    Restaurez les extensions
+  <a href="#si-votre-site-est-ancien-restaurez-les-extensions" class="md-nav__link">
+    Si votre site est ancien : Restaurez les extensions
   </a>
   
 </li>
@@ -1414,9 +1522,13 @@
 <li>le site,</li>
 <li>les bases de données civicrm et worpress,</li>
 <li>Ne pas oublier : /var/www/html/don_corps/wp-content/uploads/civicrm/custom/,</li>
-<li>Le répertoire extensions qui devra être restauré en fin d'installation <br>
+<li>Dans les anciennes installations, le répertoire extensions qui devra être restauré en fin d'installation : <em>/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext</em>.<br>
 <code>cp /var/www/html/don_corps/wp-content/pluggins/civicrm/civicrm/ext Backup_loin_du_site</code>.</li>
 </ul>
+<blockquote>
+<p>Cette étape est inutile pour les installations récentes dans lesquelles les extensions sont dans <em>/var/www/html/don_corps/wp-content/uploads/civicrm/ext</em> <br>
+Si votre installation est ancienne, voyez <a href="../extensions/#localisation-des-extensions">Localisation des extensions</a> pour les migrer dans leur localisation officielle actuelle. <br></p>
+</blockquote>
 </li>
 <li>
 <p>Dans les installations récentes, le fichier <em>civicrm.settings.php</em> contient une ligne définissant la variable php <code>auto_detect_line_endings</code>. <br>
@@ -1430,7 +1542,7 @@ Il est obsolète et la ligne doit être supprimée du fichier.</p>
 </li>
 <li>
 <p>Flushez l'installation <br>
-<code>cd /var/www/html/don_corps/wp-content/pluggins/civicrm/civicrm/ext/don_corps</code> <br>
+<code>cd /var/www/html/don_corps/wp-content/</code> <br>
 <code>cv flush</code></p>
 </li>
 </ul>
@@ -1447,7 +1559,7 @@ Il est obsolète et la ligne doit être supprimée du fichier.</p>
 <li>Changez les permissions de CiviCRM : 
 <code>chown -R www-data:www-data /var/www/html/ddctest/wp-content/plugins/civicrm</code>.</li>
 </ul>
-<h2 id="restaurez-les-extensions">Restaurez les extensions<a class="headerlink" href="#restaurez-les-extensions" title="Permanent link">&para;</a></h2>
+<h2 id="si-votre-site-est-ancien-restaurez-les-extensions">Si votre site est ancien : Restaurez les extensions<a class="headerlink" href="#si-votre-site-est-ancien-restaurez-les-extensions" title="Permanent link">&para;</a></h2>
 <p><code>cp Backup_loin_du_site /var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/</code></p>
 <h2 id="lancer-linstalleur">Lancer l'installeur<a class="headerlink" href="#lancer-linstalleur" title="Permanent link">&para;</a></h2>
 <ul>

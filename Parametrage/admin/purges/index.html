@@ -1201,10 +1201,118 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-12" type="checkbox" id="nav-4-12">
     
     <label class="md-nav__link" for="nav-4-12">
-      Gestion des documents
+      Activités et Saisines
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-4-12">
+        Activités et Saisines
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GuideUser/evenements/intro/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GuideUser/evenements/creer_activite/" title="Créer une activité" class="md-nav__link">
+      Créer une activité
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GuideUser/evenements/lister_activites/" title="Lister les activités - Devis" class="md-nav__link">
+      Lister les activités - Devis
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GuideUser/evenements/creer_saisine/" title="Créer une saisine" class="md-nav__link">
+      Créer une saisine
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GuideUser/evenements/lister_saisines.md" title="Lister les saisines" class="md-nav__link">
+      Lister les saisines
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GuideUser/calendrier/" title="Calendrier" class="md-nav__link">
+      Calendrier
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../GuideUser/rapports/" title="Rapports d'activité" class="md-nav__link">
+      Rapports d'activité
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-15" type="checkbox" id="nav-4-15">
+    
+    <label class="md-nav__link" for="nav-4-15">
+      Gestion des documents
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-4-15">
         Gestion des documents
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1258,13 +1366,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-13" type="checkbox" id="nav-4-13">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-16" type="checkbox" id="nav-4-16">
     
-    <label class="md-nav__link" for="nav-4-13">
+    <label class="md-nav__link" for="nav-4-16">
       Gestion des courriels
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-13">
+      <label class="md-nav__title" for="nav-4-16">
         Gestion des courriels
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1381,17 +1489,19 @@
 <p>La purge des données comporte plusieurs étapes :</p>
 <ul>
 <li>Des requêtes SearchKit rattachent les contacts à des groupes dynamiques (par exemple <em>donneurs dont les opérations funéraires sont achevées depuis plus de 5 ans</em>, <em>Dons annulés</em>...),</li>
-<li>une API purge les contacts de chacun des groupes en appliquant des règles différentes, définies par l'arrêté : <br><code>/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/don_corps/api/v3/Contact/Purge.php</code></li>
+<li>une API purge les contacts de chacun des groupes en appliquant des règles différentes, définies par l'arrêté : <br><code>/var/www/html/ddctest/wp-content/uploads/civicrm//ext/don_corps/api/v3/Contact/Purge.php</code></li>
 </ul>
 <blockquote>
+<p>Dans les anciennes installations : <em>/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/don_corps/api/v3/Contact/Purge.php</em>. <br>
+Voyez <a href="../../../GuideAdmin/civicrm/extensions/#localisation-des-extensions">Localisation des extensions</a> pour les migrer dans leur localisation officielle actuelle.</p>
 <p>Pour que l'API fonctionne, vous devez avoir installé <a href="../../../GuideAdmin/civicrm/cv/">cv</a> préalablement.</p>
 </blockquote>
 <h2 id="definir-le-fichier-de-log-des-purges-optionnel">Définir le fichier de log des purges (optionnel): <br><a class="headerlink" href="#definir-le-fichier-de-log-des-purges-optionnel" title="Permanent link">&para;</a></h2>
-<p>Les logs des purges s'écrivent par défaut dans <strong>/var/www/html/ddctest/wp-content/uploads/civicrm/ConfigAndLog.purge.log</strong>. Si vous souhaitez modifier la localisation de ce fichier :
-<code>nano /var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/don_corps/api/v3/Contact/Purge.php</code> <br></p>
+<p>Les logs des purges s'écrivent par défaut dans <em>/var/www/html/ddctest/wp-content/uploads/civicrm/ConfigAndLog.purge.log</em>. Si vous souhaitez modifier la localisation de ce fichier : <br>
+<code>nano /var/www/html/ddctest/wp-content/uploads/civicrm/ConfigAndLog.purge.log</code> <br></p>
 <p>Modifiez à la valeur souhaitée : la variable <code>$logfile</code></p>
 <h2 id="lancez-les-purges-a-la-main">Lancez les purges à la main<a class="headerlink" href="#lancez-les-purges-a-la-main" title="Permanent link">&para;</a></h2>
-<p><code>cd /var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/don_corps/</code><br>
+<p><code>cd /var/www/html/ddctest/wp-content/uploads/civicrm/ConfigAndLog.purge.log</code><br>
 <code>cv api Contact.Purge</code> <br>
 Les groupes de purges sont traités et les contacts sont supprimés ou leur identité est modifiée pour <em>Anonymisé ANONYMISE</em>.</p>
 <h2 id="automatiser-les-purges">Automatiser les purges<a class="headerlink" href="#automatiser-les-purges" title="Permanent link">&para;</a></h2>
