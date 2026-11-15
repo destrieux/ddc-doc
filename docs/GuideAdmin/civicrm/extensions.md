@@ -10,6 +10,7 @@ L'extension don_corps nécessite le téléchargement préalable des extensions s
 | [org.civicoop.civiruleslogger](https://github.com/CiviCooP/org.civicoop.civiruleslogger/archive/refs/heads/master.zip) | Journalise les actions déclenchées par les règles |
 | [org.civicoop.documents](https://lab.civicrm.org/extensions/documents/-/archive/master/documents-master.zip?ref_type=heads) | Gère les documents téléchargés (mini GED) |
 | org.civicrm.afform_admin | Génère les formulaires de recherche à partir de requêtes enregistrées <br> (déjà fournie avec le cœur de CiviCRM) |
+| AdminUI | Remplace des écrans standard de CiviCRM par des versions construites avec SearchKit et Form Builder <br> (déjà fournie mais non activée avec le cœur de CiviCRM) |
 | [org.civicrm.contactlayout](https://lab.civicrm.org/extensions/contactlayout/-/archive/master/contactlayout-master.zip?ref_type=heads) | Gère les grilles d'affichage des contacts |
 | [de.systopia.eventmessages](https://github.com/systopia/de.systopia.eventmessages/archive/refs/heads/master.zip) | Envoie les courriels relatifs aux événements (cérémonies…) |
 | [sktokens](https://lab.civicrm.org/extensions/sktokens/-/archive/main/sktokens-main.zip?ref_type=heads) | Crée des tokens à partir de la base de données, utilisables dans les messages |
