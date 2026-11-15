@@ -411,36 +411,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preparation-de-la-mise-a-jour" class="md-nav__link">
-    Préparation de la mise à jour
+  <a href="#1-preparer-la-mise-a-jour" class="md-nav__link">
+    1. Préparer la mise à jour
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#effacez-les-anciens-fichiers" class="md-nav__link">
-    Effacez les anciens fichiers
+  <a href="#2-effacer-les-anciens-fichiers" class="md-nav__link">
+    2. Effacer les anciens fichiers
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installez-les-nouveaux-fichiers" class="md-nav__link">
-    Installez les nouveaux fichiers
+  <a href="#3-installer-les-nouveaux-fichiers" class="md-nav__link">
+    3. Installer les nouveaux fichiers
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#si-votre-site-est-ancien-restaurez-les-extensions" class="md-nav__link">
-    Si votre site est ancien : Restaurez les extensions
+  <a href="#4-anciennes-installations-uniquement-restaurer-vos-extensions" class="md-nav__link">
+    4. Anciennes installations uniquement : restaurer vos extensions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lancer-linstalleur" class="md-nav__link">
-    Lancer l'installeur
+  <a href="#5-lancer-la-mise-a-niveau" class="md-nav__link">
+    5. Lancer la mise à niveau
   </a>
   
 </li>
@@ -1459,36 +1459,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#preparation-de-la-mise-a-jour" class="md-nav__link">
-    Préparation de la mise à jour
+  <a href="#1-preparer-la-mise-a-jour" class="md-nav__link">
+    1. Préparer la mise à jour
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#effacez-les-anciens-fichiers" class="md-nav__link">
-    Effacez les anciens fichiers
+  <a href="#2-effacer-les-anciens-fichiers" class="md-nav__link">
+    2. Effacer les anciens fichiers
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#installez-les-nouveaux-fichiers" class="md-nav__link">
-    Installez les nouveaux fichiers
+  <a href="#3-installer-les-nouveaux-fichiers" class="md-nav__link">
+    3. Installer les nouveaux fichiers
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#si-votre-site-est-ancien-restaurez-les-extensions" class="md-nav__link">
-    Si votre site est ancien : Restaurez les extensions
+  <a href="#4-anciennes-installations-uniquement-restaurer-vos-extensions" class="md-nav__link">
+    4. Anciennes installations uniquement : restaurer vos extensions
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#lancer-linstalleur" class="md-nav__link">
-    Lancer l'installeur
+  <a href="#5-lancer-la-mise-a-niveau" class="md-nav__link">
+    5. Lancer la mise à niveau
   </a>
   
 </li>
@@ -1513,62 +1513,95 @@
                 
                 
                 <h1 id="mises-a-jour-de-civicrm">Mises à jour de CiviCRM<a class="headerlink" href="#mises-a-jour-de-civicrm" title="Permanent link">&para;</a></h1>
-<h2 id="preparation-de-la-mise-a-jour">Préparation de la mise à jour<a class="headerlink" href="#preparation-de-la-mise-a-jour" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Dans Worpress dÉsactivez l'extension CiviCRM,</li>
+<blockquote>
+<p>Les commandes ci-dessous utilisent le chemin <code>/var/www/html/ddctest</code>. Remplacez-le par celui de votre site.</p>
+</blockquote>
+<h2 id="1-preparer-la-mise-a-jour">1. Préparer la mise à jour<a class="headerlink" href="#1-preparer-la-mise-a-jour" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p>Videz les caches de CiviCRM :
+    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/var/www/html/ddctest
+cv<span class="w"> </span>flush
+</code></pre></div></p>
+</li>
+<li>
+<p>Dans WordPress, désactivez l'extension CiviCRM.</p>
+</li>
 <li>
 <p>Sauvegardez :</p>
 <ul>
-<li>le site,</li>
-<li>les bases de données civicrm et worpress,</li>
-<li>Ne pas oublier : /var/www/html/don_corps/wp-content/uploads/civicrm/custom/,</li>
-<li>Dans les anciennes installations, le répertoire extensions qui devra être restauré en fin d'installation : <em>/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext</em>.<br>
-<code>cp /var/www/html/don_corps/wp-content/pluggins/civicrm/civicrm/ext Backup_loin_du_site</code>.</li>
-</ul>
+<li>les fichiers du site ;</li>
+<li>les bases de données CiviCRM et WordPress ;</li>
+<li>le dossier <code>/var/www/html/ddctest/wp-content/uploads/civicrm/custom/</code>, qui contient les documents liés aux contacts ;</li>
+<li>
+<p><strong>dans les anciennes installations uniquement</strong>, vos extensions placées dans <code>/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/</code> :
+    <div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>~/sauvegarde_civicrm
+cp<span class="w"> </span>-R<span class="w"> </span>/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext<span class="w"> </span>~/sauvegarde_civicrm/
+</code></pre></div></p>
 <blockquote>
-<p>Cette étape est inutile pour les installations récentes dans lesquelles les extensions sont dans <em>/var/www/html/don_corps/wp-content/uploads/civicrm/ext</em> <br>
-Si votre installation est ancienne, voyez <a href="../extensions/#localisation-des-extensions">Localisation des extensions</a> pour les migrer dans leur localisation officielle actuelle. <br></p>
+<p>Cette étape est inutile pour les installations récentes, dans lesquelles les extensions sont dans <code>/var/www/html/ddctest/wp-content/uploads/civicrm/ext/</code>. <br>
+Si votre installation est ancienne, voyez <a href="../extensions/#localisation-des-extensions">Localisation des extensions</a> pour les déplacer à leur emplacement actuel : c'est préférable à une sauvegarde et une restauration à chaque mise à jour.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Dans les anciennes installations</strong>, le fichier <code>civicrm.settings.php</code> contient un bloc qui définit l'option PHP <code>auto_detect_line_endings</code>, aujourd'hui obsolète. Ouvrez le fichier :
+    <div class="highlight"><pre><span></span><code>nano<span class="w"> </span>/var/www/html/ddctest/wp-content/uploads/civicrm/civicrm.settings.php
+</code></pre></div>
+    Recherchez <code>auto_detect_line_endings</code> et commentez le bloc :
+    <div class="highlight"><pre><span></span><code><span class="x">// force PHP to auto-detect Mac line endings</span>
+<span class="x">//if (version_compare(PHP_VERSION, &#39;8.1&#39;) &lt; 0) {</span>
+<span class="x">//  ini_set(&#39;auto_detect_line_endings&#39;, &#39;1&#39;);</span>
+<span class="x">//}</span>
+</code></pre></div></p>
+</li>
+</ol>
+<h2 id="2-effacer-les-anciens-fichiers">2. Effacer les anciens fichiers<a class="headerlink" href="#2-effacer-les-anciens-fichiers" title="Permanent link">&para;</a></h2>
+<p>Effacez les fichiers de CiviCRM et son cache de modèles :</p>
+<div class="highlight"><pre><span></span><code>rm<span class="w"> </span>-rf<span class="w"> </span>/var/www/html/ddctest/wp-content/plugins/civicrm
+rm<span class="w"> </span>-rf<span class="w"> </span>/var/www/html/ddctest/wp-content/uploads/civicrm/templates_c/*
+</code></pre></div>
+<blockquote>
+<p><strong>Attention</strong> : n'effacez pas <code>/var/www/html/ddctest/wp-content/uploads/civicrm/custom/</code>, qui contient les documents liés aux contacts, ni <code>/var/www/html/ddctest/wp-content/uploads/civicrm/ext/</code>, qui contient vos extensions.</p>
+</blockquote>
+<h2 id="3-installer-les-nouveaux-fichiers">3. Installer les nouveaux fichiers<a class="headerlink" href="#3-installer-les-nouveaux-fichiers" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Procédez comme pour l'<a href="../installcivi/">installation</a>.</li>
+<li>Rétablissez les droits sur les fichiers de CiviCRM :
+    <div class="highlight"><pre><span></span><code>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/html/ddctest/wp-content/plugins/civicrm
+</code></pre></div></li>
+</ol>
+<h2 id="4-anciennes-installations-uniquement-restaurer-vos-extensions">4. Anciennes installations uniquement : restaurer vos extensions<a class="headerlink" href="#4-anciennes-installations-uniquement-restaurer-vos-extensions" title="Permanent link">&para;</a></h2>
+<p>Ne restaurez <strong>que les extensions que vous avez ajoutées</strong>, une par une. Le dossier <code>ext</code> fourni avec CiviCRM contient aussi les extensions du cœur, dans leur nouvelle version : il ne faut pas les remplacer par les anciennes.</p>
+<div class="highlight"><pre><span></span><code>cp<span class="w"> </span>-R<span class="w"> </span>~/sauvegarde_civicrm/ext/don_corps<span class="w"> </span>/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/
+cp<span class="w"> </span>-R<span class="w"> </span>~/sauvegarde_civicrm/ext/org.civicoop.civirules<span class="w"> </span>/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/
+<span class="c1"># … une ligne par extension ajoutée</span>
+</code></pre></div>
+<h2 id="5-lancer-la-mise-a-niveau">5. Lancer la mise à niveau<a class="headerlink" href="#5-lancer-la-mise-a-niveau" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Dans WordPress, activez l'extension CiviCRM.</li>
+<li>
+<p>Lancez la mise à niveau de la base de données en ligne de commande :
+    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/var/www/html/ddctest
+cv<span class="w"> </span>upgrade:db
+cv<span class="w"> </span>flush
+</code></pre></div></p>
+<blockquote>
+<p>Il est aussi possible de la lancer depuis le navigateur, à l'adresse <code>https://example.org/wp-admin/admin.php?page=CiviCRM&amp;q=civicrm/upgrade&amp;reset=1</code>, ou dans WordPress par <strong>CiviCRM &gt; Settings &gt; Upgrade CiviCRM</strong>. <br>
+Mais avec une base volumineuse, cette étape peut dépasser le délai d'exécution de PHP (30 s par défaut) et s'interrompre. La ligne de commande n'a pas cette limite.</p>
 </blockquote>
 </li>
 <li>
-<p>Dans les installations récentes, le fichier <em>civicrm.settings.php</em> contient une ligne définissant la variable php <code>auto_detect_line_endings</code>. <br>
-Il est obsolète et la ligne doit être supprimée du fichier.</p>
-<p><code>nano /var/www/html/ddctest/wp-content/uploads/civicrm/civicrm.settings.php</code> <br></p>
-<p>Recherchez <em>auto_detect_line_endings</em> et commentez les lignes</p>
-<p><code>// force PHP to auto-detect Mac line endings</code> <br>
-<code>//if (version_compare(PHP_VERSION, '8.1') &lt; 0) {</code> <br>
-<code>// ini_set('auto_detect_line_endings', '1');</code> <br>
-<code>//}</code> <br></p>
+<p>Vérifiez que la base est à jour et que les extensions sont bien installées :
+    <div class="highlight"><pre><span></span><code>cv<span class="w"> </span>ext:list<span class="w"> </span>-L
+</code></pre></div>
+    Aucune extension ne doit apparaître en <code>installed-missing</code>. Si CiviCRM signale des mises à niveau d'extensions en attente, relancez <code>cv upgrade:db</code>.</p>
 </li>
 <li>
-<p>Flushez l'installation <br>
-<code>cd /var/www/html/don_corps/wp-content/</code> <br>
-<code>cv flush</code></p>
+<p>Rechargez la page d'accueil de CiviCRM.</p>
 </li>
-</ul>
-<h2 id="effacez-les-anciens-fichiers">Effacez les anciens fichiers<a class="headerlink" href="#effacez-les-anciens-fichiers" title="Permanent link">&para;</a></h2>
-<p>Effacer les fichiers existants pour CiviCRM et son cache :</p>
-<p><code>rm -rf /var/www/html/ddctest/wp-content/plugins/civicrm</code> <br>
-<code>rm -rf /var/www/html/ddctest/wp-content/uploads/civicrm/templates_c/*</code> <br></p>
-<blockquote>
-<p>ATTENTION: ne pas effacer <em>/var/www/html/ddctest/wp-content/uploads/civicrm/custom</em> qui contient les documents liés aux contacts.</p>
-</blockquote>
-<h2 id="installez-les-nouveaux-fichiers">Installez les nouveaux fichiers<a class="headerlink" href="#installez-les-nouveaux-fichiers" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Procédez comme à <a href="../installcivi/">installation</a>,</li>
-<li>Changez les permissions de CiviCRM : 
-<code>chown -R www-data:www-data /var/www/html/ddctest/wp-content/plugins/civicrm</code>.</li>
-</ul>
-<h2 id="si-votre-site-est-ancien-restaurez-les-extensions">Si votre site est ancien : Restaurez les extensions<a class="headerlink" href="#si-votre-site-est-ancien-restaurez-les-extensions" title="Permanent link">&para;</a></h2>
-<p><code>cp Backup_loin_du_site /var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/</code></p>
-<h2 id="lancer-linstalleur">Lancer l'installeur<a class="headerlink" href="#lancer-linstalleur" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Dans Wordpress, activez l'extension CiviCRM,</li>
-<li>Allez sur : <br><a href="http://example.org/wp-admin/admin.php?page=CiviCRM&amp;q=civicrm/upgrade&amp;reset=1">http://example.org/wp-admin/admin.php?page=CiviCRM&amp;q=civicrm/upgrade&amp;reset=1</a>,</li>
-<li>Acceptez la mise à niveau de votre base de donnéeS ; les nouveaux fichiers sont installés et la base upgradée.</li>
-<li>Rechargez la page d'accueil de CiviCRM,</li>
-<li>Si la mise à jour ne se lance pas, dans le bandeau de gauche de Wordpress, sous CiviCRM : <strong>Settings &gt; Upgrade CiviCRM</strong>.</li>
-</ul>
+</ol>
                 
                   
                 

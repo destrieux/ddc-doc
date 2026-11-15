@@ -1412,20 +1412,47 @@
                 
                 
                 <h1 id="installation-de-lextension-don_corps">Installation de l'extension don_corps<a class="headerlink" href="#installation-de-lextension-don_corps" title="Permanent link">&para;</a></h1>
-<ul>
-<li>Téléchargez l'extension <a href="https://github.com/destrieux/don_corps/archive/refs/heads/main.zip">don_corps</a> <br>
-En su, déplacez là et décompactez là dans : <br>
-<code>/var/www/html/ddctest/wp-content/uploads/civicrm/ext/</code><br>
-<code>chown -R www-data:www-data /var/www/html/ddctest/wp-content/uploads/civicrm/ext/don_corps</code></li>
-<li>Rafraîchissez CiviCRM<br>
-<code>cd /var/www/html/ddctest/wp-content/uploads/civicrm/ext/don_corps</code><br>
-<code>cv flush</code> <br></li>
-<li>Lancez l'installation<br>
-<code>cv ext:enable don_corps</code> <br>
-(en mode verbose : cv -vvv ext:enable don_corps)<br></li>
-</ul>
 <blockquote>
-<p>Ne pas installer en mode graphique car l'installation est longue (installation de don_corps et des autres extensions nécessaire) et échouerait en raison d'un time-out.</p>
+<p>Avant de commencer, téléchargez les extensions nécessaires : voir <a href="../extensions/">Extensions requises</a>.</p>
+</blockquote>
+<ol>
+<li>
+<p>Téléchargez l'extension <a href="https://github.com/destrieux/don_corps/archive/refs/heads/main.zip">don_corps</a>.</p>
+</li>
+<li>
+<p>En tant que superutilisateur (root), décompressez-la dans le dossier des extensions, puis <strong>renommez le dossier</strong> <code>don_corps-main</code> en <code>don_corps</code> :
+    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/var/www/html/ddctest/wp-content/uploads/civicrm/ext/
+unzip<span class="w"> </span>~/don_corps-main.zip
+mv<span class="w"> </span>don_corps-main<span class="w"> </span>don_corps
+chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>don_corps
+</code></pre></div></p>
+<blockquote>
+<p>Le dossier doit porter exactement le nom de l'extension (<code>don_corps</code>), sinon CiviCRM ne la trouve pas.</p>
+</blockquote>
+</li>
+<li>
+<p>Rafraîchissez CiviCRM pour qu'il détecte la nouvelle extension :
+    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/var/www/html/ddctest
+cv<span class="w"> </span>flush
+</code></pre></div></p>
+</li>
+<li>
+<p>Dans <strong>un second terminal</strong>, suivez le journal de CiviCRM pendant l'installation. Les messages d'installation y sont écrits, alors que le terminal en affiche peu :
+    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/var/www/html/ddctest/wp-content/uploads/civicrm/ConfigAndLog
+tail<span class="w"> </span>-f<span class="w"> </span>CiviCRM.*.log
+</code></pre></div>
+    <strong>Ctrl+C</strong> arrête le suivi une fois l'installation terminée.</p>
+</li>
+<li>
+<p>Dans le premier terminal, lancez l'installation :
+    <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>/var/www/html/ddctest
+cv<span class="w"> </span>ext:enable<span class="w"> </span>don_corps
+</code></pre></div>
+    Pour un affichage détaillé : <code>cv -vvv ext:enable don_corps</code>.</p>
+</li>
+</ol>
+<blockquote>
+<p>N'installez pas l'extension depuis l'interface web : l'installation est longue (don_corps et les extensions dont elle dépend) et échouerait en dépassant le délai d'exécution de PHP.</p>
 </blockquote>
                 
                   
