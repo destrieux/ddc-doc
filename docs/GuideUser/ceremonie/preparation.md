@@ -1,13 +1,13 @@
 # Créer un modèle de cérémonie
 Cette action n'est à réaliser qu'une fois : le modèle de cérémonie contient les informations de lieu, le titre, la description... Il sera utilisé pour créer chaque cérémonie
 
-Allez dans **Cérémonies/Modèles de Cérémonie**. <br>
-Les modèles de cérémonie disponibles s'affichent. Pour en ajouter un : **Add Cérémonie Modèle**.
+Allez dans **Evenements/Modèles d'Evenements**. <br>
+Les modèles de cérémonie disponibles s'affichent. Pour en ajouter un : **Ajouter un modèle d'évènement**.
 
 > Le modèle **Modèle de Cérémonie Test** peut être utilisé comme base pour l'étape suivante.
 
 ## Infos et paramètres
-Remplissez les informations sur le modèle de Cérémonie :
+Remplissez les informations sur le modèle d'Evènement :
 
 * **From Modèle** : vous pouvez utiliser un modèle préexistant comme base pour le modèle que vous créez.
 > Un modèle **Modèle de Cérémonie Test** est livré avec la base. Il est conseillé de l'utiliser pour ne modifier que les informations nécessaires.

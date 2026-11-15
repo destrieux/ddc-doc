@@ -92,7 +92,6 @@ nav:
       - 'Gestion des lieux de conservation': 'GuideUser/donneur/anonymat/lieux.md'
       - 'Identifiant numérique et utilisations': 'GuideUser/donneur/anonymat/identifiant.md'
       
-      
     - Gestion des pièces et des corps:
       - 'Tableau de bord des corps présents': 'GuideUser/gestion_pieces/tableau.md'
       - 'Tableau de bord des pièces présentes': 'GuideUser/gestion_pieces/tableau_pieces.md'
@@ -112,6 +111,17 @@ nav:
       - 'Listez les participants': 'GuideUser/ceremonie/liste.md'
 
     - In Memoriam: 'GuideUser/memoriam.md'
+
+    - Activités et Saisines: 
+      - Introduction : 'GuideUser/evenements/intro.md'
+      - Créer une activité : 'GuideUser/evenements/creer_activite.md'
+      - Lister les activités - Devis : 'GuideUser/evenements/lister_activites.md'
+      - Créer une saisine : 'GuideUser/evenements/creer_saisine.md'
+      - Lister les saisines : 'GuideUser/evenements/lister_saisines.md'
+
+    - Calendrier: 'GuideUser/calendrier.md'
+
+    - Rapports d'activité: 'GuideUser/rapports.md'
 
     - Gestion des documents:
       - 'Documents disponibles': 'GuideUser/documents/docsdispo.md'

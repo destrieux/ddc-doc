@@ -20,7 +20,9 @@ Il est donc fortement recommandé d'activer la journalisation étendue.
 * la télécharger 
 [lab.civicrm.org](https://lab.civicrm.org/extensions/advloggingwithchangelog/-/archive/master/advloggingwithchangelog-master.zip?ref_type=heads)
 * copier l'archive et dézippez là dans le dossier : <br>
-```/var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/```<br>
+```/var/www/html/ddctest/wp-content/uploads/civicrm/ext/```<br>
+> Dans les anciennes installations : */var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext*. <br>
+Voyez [Localisation des extensions](../../GuideAdmin/civicrm/extensions.md#localisation-des-extensions) pour les migrer dans leur localisation officielle actuelle.
 * Allez dans Administrer > Paramètres Système > Extensions > Actualiser
 * L'extension apparait dans la liste
 * Cliquez sur installer

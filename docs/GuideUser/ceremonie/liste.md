@@ -1,5 +1,5 @@
 # Lister les participants à une cérémonie
-Allez à : **Cérémonies > Statuts des PAQPF pour cérémonies**.
+Allez à : **Evènements > Cérémonies > Statuts des PAQPF pour cérémonies**.
 
 Les PAQPF des défunts décédés dans les 90 jours précédents (paramétrable) s'affichent.<br>
 

@@ -6,8 +6,11 @@
     * le site,
     * les bases de données civicrm et worpress,
     * Ne pas oublier : /var/www/html/don_corps/wp-content/uploads/civicrm/custom/,
-    * Le répertoire extensions qui devra être restauré en fin d'installation <br>
+    * Dans les anciennes installations, le répertoire extensions qui devra être restauré en fin d'installation : */var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext*.<br>
     ```cp /var/www/html/don_corps/wp-content/pluggins/civicrm/civicrm/ext Backup_loin_du_site```.
+    
+    >Cette étape est inutile pour les installations récentes dans lesquelles les extensions sont dans */var/www/html/don_corps/wp-content/uploads/civicrm/ext* <br>
+    Si votre installation est ancienne, voyez [Localisation des extensions](../../GuideAdmin/civicrm/extensions.md#localisation-des-extensions) pour les migrer dans leur localisation officielle actuelle. <br>
 
 * Dans les installations récentes, le fichier *civicrm.settings.php* contient une ligne définissant la variable php `auto_detect_line_endings`. <br>
 Il est obsolète et la ligne doit être supprimée du fichier.
@@ -22,7 +25,7 @@ Il est obsolète et la ligne doit être supprimée du fichier.
     ```//}``` <br>
 
 * Flushez l'installation <br>
-```cd /var/www/html/don_corps/wp-content/pluggins/civicrm/civicrm/ext/don_corps``` <br>
+```cd /var/www/html/don_corps/wp-content/``` <br>
 ```cv flush```
 
 ## Effacez les anciens fichiers
@@ -38,7 +41,7 @@ Effacer les fichiers existants pour CiviCRM et son cache :
 * Changez les permissions de CiviCRM : 
 ```chown -R www-data:www-data /var/www/html/ddctest/wp-content/plugins/civicrm```.
 
-## Restaurez les extensions 
+## Si votre site est ancien : Restaurez les extensions 
 ```cp Backup_loin_du_site /var/www/html/ddctest/wp-content/plugins/civicrm/civicrm/ext/```
 
 ## Lancer l'installeur

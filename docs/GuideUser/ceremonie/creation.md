@@ -1,6 +1,6 @@
 # Créer une cérémonie depuis un modèle
 
-Allez dans **Cérémonies > Nouvelle Cérémonie**.
+Allez dans **Evènements > Nouvel évènement**.
 
 Dans **From Modèle**, choisissez le modèle que vous souhaitez utiliser.
 
@@ -16,8 +16,9 @@ Modifiez éventuellement et **Enregistrer**.
 
 > Normalement les onglets Localisation et Communication n'ont pas à être modifiés.
 
-## Pour voir les cérémonies disponibles
-Allez à : **Cérémonies > Gérer les Cérémonies**<br>
-Vous pouvez éditer les propriétés d'une cérémonie en cliquant sur **Configurer**.
+## Pour voir les cérémonies crées
+* Allez à : **Evènements > Gérer les Evènement**<br>
+* Filtrez le *Type d'évènement* sur *Cérémonie d'hommage* <br>
+* Vous pouvez éditer les propriétés d'une cérémonie en cliquant sur **Configurer**.
 
 ![Liste Cérémonies](../../img/ceremonie_modif.png)
