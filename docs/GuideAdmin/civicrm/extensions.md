@@ -63,7 +63,8 @@ L'extension don_corps nécessite le téléchargement préalable des extensions s
 
 > Il n'est pas nécessaire d'installer les extensions à ce stade : il suffit de les télécharger et de les déposer dans le dossier *ad hoc*. Elles s'installeront en même temps que l'extension *don_corps*.
 
-## Contournement du bug CiviOffice
+## Contournement des bugs CiviOffice
+### Impression des documenst à partir d'évenements
 
 * Il existe un bug dans les versions récentes de CiviOffice : l'impression d'un document à partir d'un événement, ou de toute autre entité sans contact associé, est bloquée. Ce problème [a été signalé sur GitHub](https://github.com/destrieux/don_corps/issues/3).
 * Pour le contourner, il faut modifier une ligne dans le code de CiviOffice :
@@ -82,3 +83,18 @@ L'extension don_corps nécessite le téléchargement préalable des extensions s
     ```
 
 > **Ce contournement sera écrasé à chaque mise à jour de CiviOffice tant que le bug ne sera pas corrigé : il devra alors être réappliqué.**
+### Impression des étiquettes utilisation d'un corps
+
+* Ce bug empeche l'impression de documents contenant des champs depuis une entité dont le nom contient des "_". [Ce problème a été corrigé dans la version 2.1.0 béta](https://github.com/systopia/de.systopia.civioffice/issues/142).
+* Si vous utilisez une version antérieure :<br>
+```bash
+cd /var/www/html/ddctest/wp-content/uploads/civicrm/ext/de.systopia.civioffice
+cp Civi/Civioffice/Api4/Action/Civioffice/RenderWebAction.php Civi/Civioffice/Api4/Action/Civioffice/RenderWebAction.php.bak
+nano Civi/Civioffice/Api4/Action/Civioffice/RenderWebAction.php
+```
+Remplacez : <br>
+```Assertion::alnum($entityType, 'entityType must only contain alpha-numeric characters.');```<br>
+Par : <br>
+```Assertion::regex($entityType, '/^[A-Za-z0-9_]+$/', 'entityType must only contain alpha-numeric characters or underscores.');```
+
+> **Ce contournement sera écrasé à chaque mise à jour de CiviOffice 2.1.0Béta : il devra alors être réappliqué.**
